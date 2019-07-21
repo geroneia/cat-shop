@@ -1,38 +1,26 @@
-body {
-  width: 320px;
-  margin: 0;
+
+@font-face {
+  font-family: "Oswald";
+  src:
+    url("../fonts/oswaldregular.woff") format("woff"),
+    url("../fonts/oswaldregular.woff2") format("woff"),
+    url("../fonts/oswaldmedium.woff") format("woff"),
+    url("../fonts/oswaldmedium.woff2") format("woff2");
 }
 
-.visually-hidden:not(:focus):not(:active) {
-  position: absolute;
-
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-
-  white-space: nowrap;
-
-  border: 0;
-
-  clip-path: inset(100%);
-}
-
+@import "variables.less";
 @import "mixins.less";
+@import "scaffolding.less";
+@import "blocks/site-list.less";
 @import "blocks/page-header.less";
 @import "blocks/main-nav.less";
-@import "blocks/site-list.less";
 @import "blocks/main-heading.less";
 @import "blocks/programs.less";
 @import "blocks/benefits.less";
-@import "blocks/instance.less";
-@import "blocks/contacts.less";
 @import "blocks/page-footer.less";
 @import "blocks/social.less";
-@import "blocks/copyright.less";
 @import "blocks/catalog.less";
+@import "blocks/contacts.less";
+@import "blocks/copyright.less";
 @import "blocks/product.less";
 @import "blocks/to-all.less";
