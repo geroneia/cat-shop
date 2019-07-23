@@ -4,28 +4,26 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page-header container">
     <a class="page-header__logo">
-      <img class="page-header__logo-image" src="#" width="33" height="38" alt="Логотип «Cat Energy»">
+      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="200" height="40" alt="Логотип «Cat Energy»">
     </a>
-    <span class="page-header__title">
-      Cat Energy
-    </span>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button"></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
+            <a class="site-list__link">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html">Каталог продукции</a>
+            <a class="site-list__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Подбор программы</a>
+            <a class="site-list__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -33,15 +31,15 @@
   </header>
 
   <main class="page-main">
-    <section class="main-heading">
+    <section class="main-heading container">
       <h1 class="main-heading__title">Функциональное питание для котов</h1>
       <span class="main-heading__slogan">
         Занялся собой? Займись котом!
       </span>
+      <a class="main-heading__button button" href="form.html">Подобрать программу</a>
     </section>
-    <section class="programs">
+    <section class="programs container">
       <div class="programs__wrapper slider">
-        <a class="programs__button" href="form.html"></a>
         <h2 class="visually-hidden">Наши программы</h2>
         <ul class="programs__list slider__list">
           <li class="programs__item programs__item--slim slider__item">
@@ -63,7 +61,7 @@
         </ul>
       </div>
     </section>
-    <section class="benefits">
+    <section class="benefits container">
       <h2 class="benefits__title">
         Как это работает
       </h2>
@@ -78,11 +76,11 @@
           Замените один-два приема обычной еды на наше функциональное питание.
         </li>
         <li class="benefits__item">
-          Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+          Уже через месяц наслаждайтесь&nbsp;изменениями к&nbsp;лучшему вашего питомца!
         </li>
       </ul>
     </section>
-    <section class="instance">
+    <section class="instance container">
       <h2 class="instance__title">
         Живой пример
       </h2>
@@ -113,21 +111,23 @@
     </section>
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
+      <div class="contacts__wrapper container">
       <b class="contacts__text">
-        Приглашаем к сотрудничеству дилеров!
+        Приглашаем к&nbsp;сотрудничеству дилеров!
       </b>
       <address class="contacts__address">
         ул. Большая Конюшенная, д. 19/8
         Санкт-Петербург
       </address>
-      <img class="contacts__map" src="#" width="320" height="236"
+      </div>
+      <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="363"
         alt="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
     </section>
   </main>
-  <footer class="page-footer">
-    <span class="page-footer__title">
-      Cat Energy
-    </span>
+  <footer class="page-footer container">
+    <a class="page-footer__logo">
+      <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Cat Energy»">
+    </a>
     <div class="page-footer_social social">
       <ul class="social__list">
         <li class="social__item">
@@ -144,7 +144,7 @@
       </ul>
     </div>
     <div class="page-footer__copyright copyright">
-      <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>
   </footer>
 </body>
