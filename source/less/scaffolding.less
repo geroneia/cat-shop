@@ -18,12 +18,17 @@ body {
   font-family: "Arial", sans-serif;
   color: #444444;
   font-style: normal;
+  background-image:
+    url("../img/index-can-mobile@1x.png"),
+    url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 431px, 50% 264px;
 }
 
-// img {
-//   max-width: 100%;
-//   height: auto;
-// }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
@@ -61,4 +66,36 @@ body {
   line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
+    outline: 2px solid rebeccapurple;
+  }
+
+  body {
+    background-image:
+    url("../img/index-can-tablet@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 331px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+    outline: 2px solid rgb(29, 175, 78);
+  }
+  body {
+    background-image:
+    url("../img/index-can-desktop@1x.png"),
+    url("../img/index-background-desktop@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 794px 134px, 954px 0;
+  }
 }

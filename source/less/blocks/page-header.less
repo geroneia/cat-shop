@@ -2,13 +2,32 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  min-height: 54px;
+  min-height: 264px;
   padding-top: 11px;
   font-family: @font;
   background-color: #ffffff;
-  outline: 1px solid red;
 }
 
 .page-header__logo {
-  min-height: 56px;
+  height: 38px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    min-height: 100px;
+    flex-direction: row;
+  }
+  .page-header__logo {
+    height: 58px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    min-height: 128px; }
+
+  .page-header__logo {
+    height: 59px;
+  }
 }
