@@ -15,3 +15,23 @@
   display: flex;
   flex-direction: column;
 }
+
+@media (min-width: @tablet-width) {
+  .catalog__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 22px;
+  }
+
+  .catalog__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -60px;
+  }
+
+  .catalog__item {
+    width: 324px;
+    margin-left: 60px;
+    outline: 2px solid rebeccapurple;
+  }
+}

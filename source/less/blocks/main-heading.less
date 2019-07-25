@@ -32,6 +32,7 @@
 }
 
 .main-heading__button {
+  margin-bottom: 22px;
   padding-left: 73px;
   padding-right: 73px;
   font-size: 14px;
@@ -42,17 +43,57 @@
 
 @media (min-width: @tablet-width) {
   .main-heading {
-    min-height: 852px;
+    min-height: 832px;
     padding-top: 20px;
-    padding-left: 112px;
-    padding-right: 210px;
     color: #111111;
     text-align: left;
   }
 
   .main-heading__title {
+    margin-left: 82px;
+    margin-right: 210px;
+    margin-bottom: 42px;
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 46px;
+  }
+
+  .main-heading__slogan {
+    margin-bottom: 48px;
+    margin-left: 84px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .main-heading__button {
+    margin-left: 84px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 26px;
+    padding-right: 28px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #ffffff;
+    background-color: #68b738;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-heading {
+    min-height: 566px;
+    padding-top: 87px;
+  }
+
+  .main-heading__title {
+    margin-left: 82px;
+    margin-right: 600px;
+    margin-bottom: 40px;
+  }
+
+  .main-heading__slogan {
+    margin-bottom: 53px;
+  }
+
+  .main-heading__button {
+    margin-left: 82px;
   }
 }

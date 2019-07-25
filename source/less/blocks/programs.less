@@ -10,9 +10,9 @@
 }
 
 .programs__item {
-  min-height: 236px;
+  // min-height: 236px;
   padding-top: 30px;
-  width: 280px;
+  width: auto;
   background-color: #f2f2f2;
 }
 
@@ -23,7 +23,7 @@
 .programs__title {
   margin-top: 0;
   margin-left: 92px;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
   font-family: @font;
   font-weight: 400;
   font-size: 24px;
@@ -33,16 +33,21 @@
 
 .programs__description {
   margin-top: 0;
-  margin-bottom: 21px;
   margin-left: 20px;
   margin-right: 35px;
+  padding-bottom: 21px;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .programs__all {
+  display: block;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-bottom: 22px;
   font-family: @font;
   font-weight: 400;
   font-size: 16px;
@@ -50,4 +55,76 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #111111;
+}
+
+@media (min-width: @tablet-width) {
+
+  .programs__item {
+    padding-top: 74px;
+  }
+
+  .programs__item--slim {
+    margin-bottom: 30px;
+  }
+
+  .programs__title {
+    margin-left: 55px;
+    margin-bottom: 26px;
+    font-size: 36px;
+  }
+
+  .programs__description {
+    margin-left: 54px;
+    margin-right: 282px;
+    padding-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+    }
+
+  .programs__item--pro {
+    .programs__description {
+      margin-right: 310px;
+    }
+    // Не понимаю как иначе перенести слово "Мышцы" на последнюю строку. Потом еще для десктопной версии приходится отменять это правило((
+  }
+
+  .programs__all {
+    padding-top: 40px;
+    padding-left: 53px;
+    font-size: 20px;
+    line-height: 20px;
+    padding-bottom: 62px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 76px;
+  }
+  .programs__item {
+    width: 570px;
+  }
+  .programs__title {
+    margin-left: 216px;
+    margin-bottom: 75px;
+   }
+
+   .programs__description {
+     margin-right: 38px;
+   }
+   .programs__item--pro {
+    .programs__description {
+      margin-right: 38px;
+    }
+  }
+
+
+    .programs__all {
+      padding-top: 15px;
+      padding-left: 54px;
+    }
 }

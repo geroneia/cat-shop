@@ -22,7 +22,6 @@
 .benefits__item {
   margin-bottom: 26px;
   padding-left: 81px;
-  padding-right: 24px;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -31,5 +30,52 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .benefits {
+    padding-top: 46px;
+  }
+
+  .benefits__list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: -60px;
+    outline: 2px solid rgb(31, 19, 139);
+  }
+
+  .benefits__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .benefits__item {
+    width: 324px;
+    margin-bottom: 90px;
+    margin-left: 60px;
+    padding-right: 65px;
+    padding-left: 0;
+    padding-top: 154px;
+    font-size: 16px;
+    line-height: 24px;
+    outline: 2px solid saddlebrown;
+  }
+  // А как здесь сделаны фоновые цифры? Я сначала думала, это картинки, а это не они
+}
+
+@media (min-width: @desktop-width) {
+  .benefits__list {
+    margin-left: -80px;
+  }
+
+  .benefits__item {
+    min-height: 270px;
+    width: 245px;
+    margin-left: 80px;
+    margin-bottom: 0;
+    padding-right: 0;
   }
 }
