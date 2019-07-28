@@ -1,8 +1,16 @@
 .contacts__wrapper {
   display: flex;
   justify-content: flex-start;
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
   padding-bottom: 26px;
+  background-color: #ffffff;
+  // outline: 2px solid navy;
 }
+// Здесь не получилось использовать класс .container, т.к. ниже нужно его как-то переопределять, когда в десктопной версии элемент вырывается
+// из потока. Но получается, что я здесь полностью копирую правила .container  для .contacts__wrapper
 
 .contacts__text {
   width: 140px;
@@ -41,7 +49,65 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contacts__wrapper {
+    justify-content: space-between;
+    width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 55px;
+  }
+
   .contacts__text {
-    width: 354px;
+    width: 245px;
+    padding-top: 65px;
+    padding-left: 41px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contacts__address {
+    width: 245px;
+    padding-right: 42px;
+    padding-top: 63px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .contacts__street {
+    margin-bottom: 20px;
+  }
+
+  .contacts__map {
+    width: 768px;
+    height: 398px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    position: relative;
+  }
+
+  .contacts__wrapper {
+    position: absolute;
+    top: 97px;
+    left: 342px;
+    width: 570px;
+  }
+
+  .contacts__text {
+    margin-right: 80px;
+    padding-left: 77px;
+  }
+
+  .contacts__address {
+    text-align: left;
+  }
+
+  .contacts__map {
+    width: 1440px;
+    height: 400px;
+    // outline: 2px dotted red;
   }
 }
