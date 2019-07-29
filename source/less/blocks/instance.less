@@ -1,6 +1,7 @@
 .instance {
   min-height: 704px;
   background-color: #f2f2f2;
+  outline: 2px solid magenta;
 }
 
 .instance__title {
@@ -147,6 +148,43 @@
   .instance__range {
     padding-left: 69px;
     padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .instance {
+    min-height: 662px;
+    display: flex;
+  }
+
+  .instance__column {
+    width: 610px;
+  }
+  .instance__title {
+    padding-top: 63px;
+    padding-bottom: 129px;
+  }
+
+  .instance__text {
+    padding-bottom: 52px;
+    padding-right: 176px;
+  }
+
+  .instance__sum {
+    width: 570px;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 61px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    // Как здесь лучше увеличить расстояние между строками "Затраты на питание:" и 15 00 руб."?
+  }
+
+  .instance__range {
+    padding-left: 40px;
+    padding-top: 564px;
     padding-bottom: 10px;
   }
 }
