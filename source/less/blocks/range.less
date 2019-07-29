@@ -4,23 +4,24 @@
 }
 
 .range-slider__scale {
+  position: relative;
   align-self: center;
   width: 84px;
   height: 14px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-left: 5px;
   margin-left: 19px;
   margin-right: 19px;
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
   border-radius: 7px;
+  // outline: 2px solid lightcoral;
 }
 
 .range-slider__fill {
+  position: absolute;
+  top: 3px;
+  left: 6px;
   width: 35px;
   height: 6px;
-
   border-radius: 3px;
   background-color: #68b738;
 }
@@ -31,4 +32,44 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .range-slider__scale {
+    width: 428px;
+    height: 6px;
+    padding: 0;
+    margin-left: 23px;
+    margin-right: 23px;
+    background-color: #dcdcdc;
+    border: none;
+    border-radius: 2px;
+  }
+
+  .range-slider__fill {
+    width: 34px;
+    height: 34px;
+    top: -13px;
+    left: 200px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 8px;
+      top: 12px;
+      left: 12px;
+      background-color: #68b738;
+      border-radius: 50%;
+    }
+  }
+
+.range-slider__start,
+.range-slider__finish {
+  font-size: 20px;
+  line-height: 20px;
+  }
 }

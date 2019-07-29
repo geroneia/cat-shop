@@ -32,6 +32,7 @@
   position: relative;
   display: inline-block;
   width: 124px;
+  height: 56px;
   margin: 0;
   padding-top: 13px;
   padding-bottom: 17px;
@@ -77,4 +78,75 @@
 
 .instance__range {
   padding-left: 42px;
+}
+
+@media (min-width: @tablet-width) {
+  .instance {
+    min-height: 1081px;
+  }
+
+  .instance__wrapper {
+    justify-content: flex-start;
+  }
+
+  .instance__title {
+    margin: 0;
+    padding-top: 43px;
+    padding-bottom: 48px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .instance__text {
+    padding-bottom: 37px;
+    padding-right: 14px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .instance__value {
+    width: 162px;
+    height: 72px;
+    margin: 0;
+    margin-right: 42px;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    font-size: 30px;
+    line-height: 37px;
+
+    &:nth-child(2) .instance__data {
+      left: 8px;
+    }
+  }
+
+  .instance__data {
+    bottom: -7px;
+    left: 25px;
+    font-size: 14px;
+    line-height: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .instance__sum {
+    width: 176px;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 633px;
+    margin-top:12px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+    // Как здесь лучше увеличить расстояние между строками "Затраты на питание:" и 15 00 руб."?
+  }
+
+  .instance__range {
+    padding-left: 69px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
