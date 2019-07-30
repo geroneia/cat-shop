@@ -6,8 +6,6 @@
   background-color: #ffffff;
   // outline: 2px solid navy;
 }
-// Здесь не получилось использовать класс .container, т.к. ниже нужно его как-то переопределять, когда в десктопной версии элемент вырывается
-// из потока. Но получается, что я здесь полностью копирую правила .container  для .contacts__wrapper
 
 .contacts__text {
   width: 140px;
@@ -89,16 +87,17 @@
     top: 92px;
     left: 344px;
     width: 570px;
-
-    .container {
-      display: none;
-    }
       // outline: 2px solid black;
+  }
+
+  .contacts__wrapper.container {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .contacts__text {
     margin-right: 80px;
-    padding-left: 45px;
+    padding-left: 75px;
   }
 
   .contacts__address {
