@@ -14,6 +14,12 @@
   line-height: 60px;
 }
 
+.instance__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .instance__text {
   padding-bottom: 10px;
   padding-right: 14px;
@@ -21,12 +27,6 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-}
-
-.instance__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .instance__value {
@@ -134,6 +134,9 @@
   }
 
   .instance__sum {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 176px;
     margin-left: auto;
     margin-right: 0;
@@ -142,6 +145,10 @@
     font-size: 20px;
     line-height: 20px;
     text-align: right;
+
+    span {
+      margin-bottom: 10px;
+    }
     // Как здесь лучше увеличить расстояние между строками "Затраты на питание:" и 15 00 руб."?
   }
 
@@ -172,7 +179,8 @@
   }
 
   .instance__sum {
-    width: 570px;
+    flex-direction: row;
+    width: 330px;
     margin-left: 0;
     margin-bottom: 0;
     margin-top: 61px;
