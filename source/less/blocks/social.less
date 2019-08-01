@@ -1,12 +1,42 @@
 .social__list {
   display: flex;
   list-style: none;
+  padding: 0;
+  margin-left: 73px;
+  margin-right: 82px;
+  margin-top: 14px;
+  margin-bottom: 17px;
+  // outline: 2px solid hotpink;
 }
 
 .social__item {
-  margin-right: 28px;
+  margin-right: 37px;
+  padding-top: 10px;
+
+  &:nth-child(2) {
+    margin-right: 39px;
+  }
 
   &:last-child {
     margin-right: 0;
+    padding-top: 8px;
+  }
+}
+
+.social__icon {
+  path {
+    fill: #666666;
+  }
+
+  &:hover {
+    path {
+      fill: #68b738;
+    }
+  }
+
+  &:active {
+    path {
+      fill: rgba(110, 186, 64, 0.3);
+    }
   }
 }

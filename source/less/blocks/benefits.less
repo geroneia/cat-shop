@@ -1,5 +1,5 @@
 .benefits {
-  padding-top: 18px;
+  padding-top: 17px;
 }
 
 .benefits__title {
@@ -20,6 +20,7 @@
 }
 
 .benefits__item {
+  position: relative;
   margin-bottom: 26px;
   padding-left: 81px;
   font-family: "Arial", sans-serif;
@@ -30,6 +31,37 @@
 
   &:last-child {
     margin-bottom: 46px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    background-repeat: no-repeat;
+  }
+
+  &:first-child::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+    background-position: 5px 5px;
+  }
+
+  &:nth-child(2)::before {
+    background-image: url("../img/advantage-powder@1x.png");
+    background-position: 5px 4px;
+  }
+
+  &:nth-child(3)::before {
+    background-image: url("../img/advantage-dining@1x.png");
+    background-position: 4px 5px;
+  }
+
+  &:nth-child(4)::before {
+    background-image: url("../img/advantage-clock@1x.png");
+    background-position: 5px 5px;
   }
 }
 
