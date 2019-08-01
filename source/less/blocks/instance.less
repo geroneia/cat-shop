@@ -8,7 +8,7 @@
   margin: 0;
   padding-top: 17px;
   padding-bottom: 10px;
-  font-family: @font;
+  font-family: @font-headings;
   font-weight: 400;
   font-size: 36px;
   line-height: 60px;
@@ -17,7 +17,7 @@
 .instance__text {
   padding-bottom: 10px;
   padding-right: 14px;
-  font-family: "Arial", sans-serif;
+  font-family: @font-general;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -37,7 +37,7 @@
   margin: 0;
   padding-top: 13px;
   padding-bottom: 17px;
-  font-family: @font;
+  font-family: @font-headings;
   font-weight: 400;
   text-align: center;
   vertical-align: middle;
@@ -54,7 +54,9 @@
   bottom: -16px;
   left: 19px;
   display: inline-block;
-  font-family: "Arial", sans-serif;
+  width: 83px;
+  text-align: center;
+  font-family: @font-general;
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
@@ -70,7 +72,7 @@
   margin-right: 40px;
   margin-bottom: 306px;
   margin-top: 34px;
-  font-family: @font;
+  font-family: @font-headings;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -116,21 +118,19 @@
     line-height: 37px;
 
     &:nth-child(2) .instance__data {
+      width: 143px;
       left: 8px;
     }
   }
 
   .instance__data {
     bottom: -7px;
-    left: 25px;
+    left: 22px;
     font-size: 14px;
     line-height: 14px;
+    width: 116px;
     padding-left: 8px;
     padding-right: 8px;
-
-    br {
-      display: none;
-    }
   }
 
   .instance__sum {

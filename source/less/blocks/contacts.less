@@ -9,7 +9,7 @@
 
 .contacts__text {
   width: 140px;
-  font-family: @font;
+  font-family: @font-headings;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -18,7 +18,7 @@
 
 .contacts__address {
   width: 140px;
-  font-family: "Arial", sans-serif;
+  font-family: @font-general;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -50,6 +50,8 @@
   }
 
   .contacts__text {
+    display: flex;
+    flex-direction: column;
     width: 245px;
     padding-top: 35px;
     padding-left: 41px;
@@ -67,7 +69,9 @@
   }
 
   .contacts__street {
+    margin-left: auto;
     margin-bottom: 20px;
+    width: 155px;
   }
 
   .contacts__map {
@@ -97,6 +101,10 @@
   .contacts__text {
     margin-right: 80px;
     padding-left: 75px;
+  }
+
+  .contacts__street {
+    margin-right: 180px;
   }
 
   .contacts__address {
