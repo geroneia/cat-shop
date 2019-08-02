@@ -100,20 +100,30 @@
       </div>
     </div>
       <div class="instance__column">
-        <div class="instance__wrapper slider">
-          <div class="instance__photo instance__photo--fat-cat slider-item">
+        <div class="instance__slider-wrapper">
+          <div class="instance__photo-wrapper instance__photo-wrapper--fat-cat instance__photo-wrapper--appearance">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="../img/before-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="../img/before-tablet@1x.png">
+            <img class="instance__image" src="../img/before-mobile@1x.png" alt="Борис был толстым">
+          </picture>
           </div>
-          <div class="instance__photo instance__photo--slim-cat slider-item">
-          </div>
-
-          <div class="instance__range range-slider">
-            <span class="range-slider__start">Было</span>
-            <div class="range-slider__scale">
-              <div class="range-slider__fill"></div>
-            </div>
-            <span class="range-slider__finish">Стало</span>
+          <div class="instance__photo-wrapper instance__photo-wrapper--slim-cat">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="../img/after-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="../img/after-tablet@1x.png">
+              <img class="instance__image" src="../img/after-mobile@1x.png" alt="Борис стал стройным">
+            </picture>
           </div>
         </div>
+          <div class="instance__range range-slider">
+            <button class="range-slider__start" type="button">Было</button>
+            <div class="range-slider__scale">
+              <div class="range-slider__pin" tabindex="0" aria-label="Управление слайдером"></div>
+            </div>
+            <button class="range-slider__finish" type="button">Стало</button>
+          </div>
+
       </div>
     </section>
     <section class="contacts">

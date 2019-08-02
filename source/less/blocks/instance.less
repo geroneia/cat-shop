@@ -1,5 +1,4 @@
 .instance {
-  min-height: 704px;
   background-color: #f2f2f2;
   // outline: 2px solid magenta;
 }
@@ -69,7 +68,7 @@
 .instance__sum {
   margin-left: 47px;
   margin-right: 40px;
-  margin-bottom: 306px;
+  margin-bottom: 37px;
   margin-top: 34px;
   font-family: @font-headings;
   font-weight: 400;
@@ -78,13 +77,58 @@
   text-transform: uppercase;
 }
 
+.instance__slider-wrapper {
+  position: relative;
+  display: flex;
+  width: 280px;
+  text-align: center;
+  margin: 0 auto 34px
+}
+
+.instance__photo-wrapper {
+  width: 100%;
+  // что это дает?
+}
+
+.instance__photo-wrapper--fat-cat {
+  flex-shrink: 0;
+
+  .instance__image {
+    font-family: "object-fit: cover; object-position: left;", sans-serif;
+    // что это за странное свойство?
+  }
+}
+
+.instance__photo-wrapper--slim-cat {
+  flex-shrink: 2;
+
+  .instance__image {
+    font-family: "object-fit: cover; object-position: right;", sans-serif;
+  }
+}
+
+// .instance__photo-wrapper--appearance {
+//   animation: appearance .7s
+// }
+
+// .instance__photo-wrapper--disappearance {
+//   animation: disappearance .7s
+// }
+
+.instance__image {
+  max-width: none;
+  width: 100%;
+  height: 232px;
+  object-fit: cover;
+}
+
 .instance__range {
-  padding-left: 42px;
+  padding-left: 1142px;
 }
 
 @media (min-width: @tablet-width) {
   .instance {
-    min-height: 1081px;
+    // min-height: 1081px;
   }
 
   .instance__wrapper {
@@ -159,7 +203,7 @@
 
 @media (min-width: @desktop-width) {
   .instance {
-    min-height: 662px;
+    // min-height: 662px;
     display: flex;
   }
 
@@ -190,7 +234,6 @@
 
   .instance__range {
     padding-left: 40px;
-    padding-top: 564px;
     padding-bottom: 10px;
   }
 }

@@ -1,6 +1,11 @@
 .range-slider {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  width: 200px;
+  padding-left: 43px;
+  margin-bottom: 33px;
 }
 
 .range-slider__scale {
@@ -13,10 +18,11 @@
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
   border-radius: 7px;
+  flex-shrink: 0;
   // outline: 2px solid lightcoral;
 }
 
-.range-slider__fill {
+.range-slider__pin {
   position: absolute;
   top: 3px;
   left: 6px;
@@ -28,10 +34,15 @@
 
 .range-slider__start,
 .range-slider__finish {
+  padding: 0;
+  cursor: pointer;
+  color: #111111;
+  background-color: transparent;
   font-family: @font-headings;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  border: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -46,7 +57,7 @@
     border-radius: 2px;
   }
 
-  .range-slider__fill {
+  .range-slider__pin {
     width: 34px;
     height: 34px;
     top: -13px;
