@@ -102,7 +102,7 @@
     left: 116px;
     width: 24px;
     height: 11px;
-    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
   }
@@ -115,12 +115,35 @@
 
   .programs__item--slim {
     margin-bottom: 30px;
+
+    .programs__title::after {
+      top: 5px;
+      left: 420px;
+      width: 140px;
+      height: 194px;
+    }
   }
 
   .programs__title {
     margin-left: 55px;
     margin-bottom: 26px;
     font-size: 36px;
+
+    &::before {
+      top: 18px;
+      left: 390px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .programs__item--pro {
+    .programs__title::after {
+      top: 60px;
+      left: 357px;
+      width: 268px;
+      height: 112px;
+    }
   }
 
   .programs__description {
@@ -138,6 +161,14 @@
     font-size: 20px;
     line-height: 20px;
     padding-bottom: 62px;
+
+    &::after {
+      top: 45px;
+      left: 183px;
+      width: 24px;
+      height: 11px;
+      background-image: url("../img/icon-right-arrow-long.svg");
+    }
   }
 }
 
