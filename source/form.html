@@ -3,15 +3,15 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&amp;display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page-header container">
     <a class="page-header__logo">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="200" height="40" alt="Логотип «Cat Energy»">
+      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип «Cat Energy»">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button"></button>
@@ -104,20 +104,20 @@
     </section>
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper container">
         <b class="contacts__text">
           Приглашаем к&nbsp;сотрудничеству дилеров!
         </b>
         <address class="contacts__address">
-          ул. Большая Конюшенная, д. 19/8
-          Санкт-Петербург
+          <p class="contacts__street">ул. Большая Конюшенная, д. 19/8</p>
+          <p class="contacts__town">Санкт-Петербург</p>
         </address>
       </div>
       <img class="contacts__map" src="img/bg-map-mobile@1x.png" width="320" height="363"
         alt="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer container">
     <a class="page-footer__logo">
       <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Cat Energy»">
     </a>
@@ -137,7 +137,7 @@
       </ul>
     </div>
     <div class="page-footer__copyright copyright">
-      <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>
   </footer>
 </body>

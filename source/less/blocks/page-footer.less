@@ -1,25 +1,84 @@
 .page-footer {
   display: flex;
   flex-direction: column;
+  min-height: 236px;
   background-color: #f2f2f2;
 }
 
 .page-footer__logo {
-  display: flex;
+  // display: flex;
   width: 280px;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  // min-height: 95px;
+  padding-top: 37px;
+  padding-bottom: 28px;
+  padding-left: 76px;
+  padding-right: 76px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .page-footer__logo-image {
-  display: block;
-  margin: auto;
+  // display: block;
 }
 
 .page-footer_social {
-  min-height: 62px;
+  // min-height: 62px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .page-footer__copyright {
   min-height: 78px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 150px;
+    border: none;
+  }
+
+  // .page-footer__logo {
+  //   width: 200px;
+  //   height: auto;
+  // }
+
+  .page-footer__logo-image {
+    width: 128px;
+    height: 24px;
+  }
+  // я не понимаю, почему размеры не совпадают. Это та же проблема, что с иконкой в .copyright
+
+  .page-footer_social {
+    min-height: 150px;
+    width: 324px;
+    border: none;
+  }
+
+  .page-footer__copyright {
+    width: 162px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__logo {
+    width: 245px;
+    padding-left: 0;
+    padding-top: 60px;
+  }
+
+  .page-footer__logo-image {
+    width: 128px;
+    height: 24px;
+  }
+
+  .page-footer_social {
+    width: 570px;
+    // outline: 2px solid rebeccapurple;
+  }
+
+  .page-footer__copyright {
+    width: 245px;
+    padding-left: 83px;
+    // outline: 2px solid rebeccapurple;
+  }
 }

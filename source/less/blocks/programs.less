@@ -10,44 +10,226 @@
 }
 
 .programs__item {
-  min-height: 236px;
+  // min-height: 236px;
   padding-top: 30px;
-  width: 280px;
+  width: auto;
   background-color: #f2f2f2;
 }
 
-.programs__item--slim {
-  margin-bottom: 20px;
-}
-
 .programs__title {
+  position: relative;
   margin-top: 0;
-  margin-left: 92px;
-  margin-bottom: 31px;
-  font-family: @font;
+  margin-left: 91px;
+  margin-bottom: 30px;
+  font-family: @font-headings;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -6px;
+    left: -69px;
+    width: 50px;
+    height: 50px;
+    background-color: #68b738;
+    border-radius: 50%;
+  }
+}
+
+.programs__item--slim {
+  margin-bottom: 20px;
+
+  .programs__title::after {
+    position: absolute;
+    content: "";
+    top: -8px;
+    left: -61px;
+    width: 35px;
+    height: 49px;
+    background-image: url("../img/icon-cat-slim.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.programs__item--pro {
+  .programs__title::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: -78px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/icon-cat-pro.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
 
 .programs__description {
   margin-top: 0;
-  margin-bottom: 21px;
   margin-left: 20px;
   margin-right: 35px;
-  font-family: "Arial", sans-serif;
+  padding-bottom: 21px;
+  font-family: @font-general;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .programs__all {
-  font-family: @font;
+  position: relative;
+  display: block;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-bottom: 22px;
+  font-family: @font-headings;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
   color: #111111;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 12px;
+    left: 116px;
+    width: 24px;
+    height: 11px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .programs__item {
+    padding-top: 74px;
+  }
+
+  .programs__item--slim {
+    margin-bottom: 30px;
+
+    .programs__title::after {
+      top: 5px;
+      left: 420px;
+      width: 140px;
+      height: 194px;
+    }
+  }
+
+  .programs__title {
+    margin-left: 55px;
+    margin-bottom: 26px;
+    font-size: 36px;
+
+    &::before {
+      top: 18px;
+      left: 390px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .programs__item--pro {
+    .programs__title::after {
+      top: 60px;
+      left: 357px;
+      width: 268px;
+      height: 112px;
+    }
+  }
+
+  .programs__description {
+    margin-left: 54px;
+    margin-right: 282px;
+    padding-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+  }
+
+  .programs__all {
+    padding-top: 40px;
+    padding-left: 53px;
+    font-size: 20px;
+    line-height: 20px;
+    padding-bottom: 62px;
+
+    &::after {
+      top: 45px;
+      left: 183px;
+      width: 24px;
+      height: 11px;
+      background-image: url("../img/icon-right-arrow-long.svg");
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 76px;
+  }
+
+  .programs__item {
+    width: 570px;
+  }
+
+  .programs__title {
+    margin-left: 216px;
+    margin-bottom: 75px;
+
+    &::before {
+      top: -28px;
+      left: -164px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .programs__description {
+    margin-right: 38px;
+  }
+
+  .programs__item--slim {
+    margin-bottom: 0;
+
+    .programs__title::after {
+      top: -35px;
+      left: -150px;
+      width: 70px;
+      height: 97px;
+    }
+  }
+
+  .programs__item--pro {
+    .programs__title::after {
+      top: -6px;
+      left: -180px;
+      width: 134px;
+      height: 56px;
+    }
+  }
+
+  .programs__all {
+    padding-top: 15px;
+    padding-left: 54px;
+
+    &::after {
+      top: 20px;
+      left: 184px;
+      width: 24px;
+      height: 11px;
+      background-image: url("../img/icon-right-arrow-long.svg");
+    }
+  }
 }
