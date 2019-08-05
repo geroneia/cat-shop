@@ -26,25 +26,58 @@
 @media (min-width: @tablet-width) {
   .site-list {
     flex-direction: row;
+    flex-wrap: wrap;
     min-height: 100px;
   }
 
   .site-list__link {
     font-size: 18px;
     line-height: 25px;
-    padding-left: 37px;
+    padding-top: 21px;
+    margin-left: 33px;
     border: none;
     // в макете высота строки 24,86px
     // outline: 2px solid olive;
   }
+
+  .site-list__link--active {
+    position: relative;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: -9px;
+      left: 0;
+      height: 2px;
+      background: #68b738;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .site-list {
+    justify-content: flex-start;
+  }
+
   .site-list__link {
     font-size: 20px;
     line-height: 25px;
+    font-weight: 400;
     // в макете высота строки 24,86px;
     color: #ffffff;
     background-color: #64a83b;
+    padding-top: 67px;
+    margin-left: 30;
+    border: none;
+  }
+
+  .site-list__link--active {
+    &::after {
+      background: #ffffff;
+    }
   }
 }

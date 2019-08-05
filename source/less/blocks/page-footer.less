@@ -34,6 +34,7 @@
     flex-direction: row;
     justify-content: space-between;
     min-height: 150px;
+    border: none;
   }
 
   // .page-footer__logo {
@@ -61,7 +62,13 @@
 @media (min-width: @desktop-width) {
   .page-footer__logo {
     width: 245px;
-    // outline: 2px solid rebeccapurple;
+    padding-left: 0;
+    padding-top: 60px;
+  }
+
+  .page-footer__logo-image {
+    width: 128px;
+    height: 24px;
   }
 
   .page-footer_social {

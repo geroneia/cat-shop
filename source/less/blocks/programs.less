@@ -187,6 +187,13 @@
   .programs__title {
     margin-left: 216px;
     margin-bottom: 75px;
+
+    &::before {
+      top: -28px;
+      left: -164px;
+      width: 100px;
+      height: 100px;
+    }
   }
 
   .programs__description {
@@ -195,10 +202,34 @@
 
   .programs__item--slim {
     margin-bottom: 0;
+
+    .programs__title::after {
+      top: -35px;
+      left: -150px;
+      width: 70px;
+      height: 97px;
+    }
+  }
+
+  .programs__item--pro {
+    .programs__title::after {
+      top: -6px;
+      left: -180px;
+      width: 134px;
+      height: 56px;
+    }
   }
 
   .programs__all {
     padding-top: 15px;
     padding-left: 54px;
+
+  &::after {
+    top: 20px;
+    left: 184px;
+    width: 24px;
+    height: 11px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    }
   }
 }
