@@ -2,12 +2,14 @@
   display: flex;
   text-decoration: none;
   justify-content: space-between;
+  // padding-top: 30px;
+  // padding-bottom: 31px;
+  width: 162px;
 
   span {
     display: inline-block;
-    padding-top: 30px;
-    padding-bottom: 31px;
-    width: 140px;
+    vertical-align: bottom;
+    width: 115px;
     font-family: @font-general;
     font-weight: 400;
     font-size: 16px;
@@ -18,10 +20,9 @@
 
 .copyright__icon {
   margin-left: auto;
-  width: 45px;
-  height: auto;
-  // мне не понятно, почему, когда я задаю для svg размеры по макету, они отображаются маленькими. В таком же, на мой взглялд, случае у иконок соцсетей с размерами все ок
-  padding-top: 2px;
+  width: 27px;
+  height: 34px;
+  margin-top: 2px;
 
   path {
     fill: #666666;
@@ -41,10 +42,10 @@
 }
 
 @media (min-width: @tablet-width) {
-  .copyright__link {
-    span {
-      padding-top: 64px;
-      padding-bottom: 31px;
-    }
+  .copyright__icon {
+    // margin: auto;
+    width: 27px;
+    height: 34px;
+    // margin-top: 40px;
   }
 }
