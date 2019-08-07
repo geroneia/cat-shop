@@ -3,12 +3,13 @@
 }
 
 .catalog__title {
-  margin-top: 0;
-  margin-bottom: 27px;
+  margin: 0;
+  padding-bottom: 27px;
   font-family: @font-headings;
   font-weight: 400;
   font-size: 36px;
   line-height: 60px;
+  border-bottom: 1px solid #ededed;
 }
 
 .catalog__wrapper {
@@ -17,6 +18,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .catalog {
+    padding-top: 0;
+  }
+
   .catalog__title {
     font-size: 60px;
     line-height: 60px;
