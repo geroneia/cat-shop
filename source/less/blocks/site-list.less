@@ -112,4 +112,32 @@
       background: #ffffff;
     }
   }
+
+  .site-list--inner-page {
+    .site-list__link {
+      color: #111111;
+
+      &:hover {
+        color: rgba(17, 17, 17, 0.6);
+      }
+
+      &:active {
+        color: rgba(17, 17, 17, 0.3);
+      }
+    }
+
+    .site-list__link--active {
+      &::after {
+        background: #68b738;
+      }
+
+      &:hover {
+        color: #111111;
+      }
+
+      &:active {
+        color: #111111;
+      }
+    }
+  }
 }
