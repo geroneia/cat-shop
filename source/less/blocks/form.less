@@ -1,0 +1,139 @@
+
+.form__profile {
+  margin: 0;
+  padding-top: 4px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  border-bottom: 1px solid #ededed;
+
+  .form__profile-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+  .form__profile-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+
+  label,
+  input {
+    font: inherit;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  input {
+    padding-top: 13px;
+    padding-bottom: 12px;
+    padding-left: 13px;
+    border: 1px solid #e6e6e6;
+  }
+
+  label {
+    margin-right: 14px;
+    padding-top: 14px;
+
+    &:last-of-type {
+      margin-right: 12px;
+    }
+  }
+}
+
+.form__name {
+  width: 229px;
+  margin-bottom: 14px;
+}
+
+.form__weight {
+  width: 203px;
+  margin-bottom: 14px;
+}
+
+.form__age {
+  width: 171px;
+  margin-bottom: 23px;
+}
+
+.form__program {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 1px solid #ededed;
+}
+
+.form__owner-contacts {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 1px solid #ededed;
+
+  .form__email,
+  .form__tel {
+    font: inherit;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgba(68, 68, 68, 1);
+    text-transform: uppercase;
+  }
+}
+
+.form__description {
+  display: flex;
+  padding-top: 29px;
+  align-items: top;
+  text-align: left;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: none;
+  min-width: 280px;
+  // flex-wrap: nowrap;
+
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: block;
+    margin-left: 22px;
+    width: 1300px;
+    height: 3px;
+    margin-top: 14px;
+    background-color: #68b738;
+    text-align: right;
+  }
+  // Не получились зеленые полосы - как задать им width и чтобы длинная фраза "Контактные данные" правильно переносилась?
+}
+
+.form__comment {
+  border: none;
+  border-bottom: 1px solid #ededed;
+}
+
+.form__comment-text {
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.form__extra {
+  border: none;
+  border-bottom: 1px solid #ededed;
+}
