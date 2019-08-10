@@ -39,44 +39,50 @@
         <fieldset class="form__profile">
           <ul class="form__profile-list">
             <li class="form__profile-option">
-              <label for="name">Имя:*</label>
-              <input class="form__name" type="text" name="name" value="Барсик" id="name">
+              <label class="form__profile-label" for="name">Имя:*</label>
+              <input class="form__name" type="text" name="name" placeholder="Барсик" id="name">
             </li>
             <li class="form__profile-option"></li>
-              <label for="weight">Вес (кг):*</label>
-              <input class="form__weight" type="text" name="weight" value="7" id="weight">
+            <label class="form__profile-label" for="weight">Вес (кг):*</label>
+            <input class="form__weight" type="text" name="weight" placeholder="7" id="weight">
             </li>
             <li class="form__profile-option"></li>
-              <label for="age">Возраст (лет):</label>
-              <input class="form__age" type="age" name="age" value="7" id="age">
+            <label class="form__profile-label" for="age">Возраст (лет):</label>
+            <input class="form__age" type="age" name="age" placeholder="7" id="age">
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__program filter">
-          <ul class="filter__list">
+          <ul class="filter__list filter__list-program">
             <li class="filter__option">
               <input class="filter__input filter__input--radio" type="radio" name="program" value="weight-loss"
                 id="weight-loss">
-              <label class="filter__label" for="weight-loss">Похудение</label>
+              <label class="filter__label filter__label--radio" for="weight-loss">Похудение</label>
             </li>
             <li class="filter__option">
               <input class="filter__input filter__input--radio" type="radio" name="program" value="weight-gain"
                 id="weight-gain" checked>
-              <label class="filter__label" for="weight-gain">Набор массы</label>
+              <label class="filter__label filter__label--radio" for="weight-gain">Набор массы</label>
             </li>
             <li class="filter__option">
               <input class="filter__input filter__input--radio" type="radio" name="program" value="need-advice"
                 id="need-advice">
-              <label class="filter__label" for="need-advice">Не знаю (нужен ваш совет)</label>
+              <label class="filter__label filter__label--radio" for="need-advice">Не знаю (нужен ваш совет)</label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__owner-contacts">
           <legend class="form__description form__description--owner">Контактные&nbsp;данные (владельца кота)</legend>
-          <label for="email">E-mail:*</label>
-          <input class="form__email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
-          <label for="tel">Телефон:*</label>
-          <input class="form__tel" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90">
+          <ul class="form__list">
+            <li class="form__item form__item--email">
+              <label class="form__item-label form__item-label--email" for="email">E-mail:*</label>
+              <input class="form__email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+            </li>
+            <li class="form__item form__item--tel"></li>
+              <label class="form__item-label form__item-label--tel" for="tel">Телефон:*</label>
+              <input class="form__tel" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90">
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="form__comment">
           <legend class="form__description form__description--comment">Комментарий</legend>
@@ -84,25 +90,25 @@
         </fieldset>
         <fieldset class="form__extra filter">
           <legend class="form__description form__description--extra">Дополнительно</legend>
-          <ul class="filter__list">
-            <li class="filter__option">
+          <ul class="filter__list filter__list-extra">
+            <li class="filter__option filter__option--extra">
               <input class="filter__input filter__input--checkbox" type="checkbox" name="extra" value="sweetener"
-                id="sweetener">
-              <label for="sweetener">Сахарозаменитель</label>
+                id="sweetener" checked>
+              <label class="filter__label filter__label--checkbox" for="sweetener">Сахарозаменитель</label>
             </li>
-            <li class="filter__option">
+            <li class="filter__option filter__option--extra">
               <input class="filter__input filter__input--checkbox" type="checkbox" name="extra" value="water"
                 id="water">
-              <label for="water">Питьевая вода</label>
+              <label class="filter__label filter__label--checkbox" for="water">Питьевая вода</label>
             </li>
-            <li class="filter__option">
+            <li class="filter__option filter__option--extra">
               <input class="filter__input filter__input--checkbox" type="checkbox" name="extra" value="milk" id="milk">
-              <label for="milk">Молоко</label>
+              <label class="filter__label filter__label--checkbox" for="milk">Молоко</label>
             </li>
-            <li class="filter__option">
+            <li class="filter__option filter__option--extra">
               <input class="filter__input filter__input--checkbox" type="checkbox" name="extra" value="vitamins"
                 id="vitamins">
-              <label for="vitamins">Витамины</label>
+              <label class="filter__label filter__label--checkbox" for="vitamins">Витамины</label>
             </li>
           </ul>
         </fieldset>
