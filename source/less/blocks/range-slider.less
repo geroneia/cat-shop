@@ -19,17 +19,29 @@
   border: 1px solid #cdcdcd;
   border-radius: 7px;
   flex-shrink: 0;
+  cursor: pointer;
   // outline: 2px solid lightcoral;
 }
 
 .range-slider__pin {
   position: absolute;
   top: 3px;
-  left: 6px;
+  left: 5px;
   width: 35px;
   height: 6px;
   border-radius: 3px;
   background-color: #68b738;
+}
+
+
+.range-slider__pin--before {
+  right: auto;
+  left: 5px;
+}
+
+.range-slider__pin--after {
+  right: 5px;
+  left: auto;
 }
 
 .range-slider__start,
@@ -47,6 +59,7 @@
 
 @media (min-width: @tablet-width) {
   .range-slider {
+    background-color: transparent;
     width: 708px;
     padding-left: 70px;
     padding-right: 74px;
