@@ -8,6 +8,7 @@
 .filter__label--radio {
   position: relative;
   padding-left: 22px;
+  color: #222222;
   cursor: pointer;
 
   &::before {
@@ -20,6 +21,18 @@
     border: 1px solid #cfcfcf;
     background-color: #ffffff;
     border-radius: 50%;
+  }
+
+  &:hover {
+    color: #222222;
+
+    &::before {
+      border-color: #bababa;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -54,6 +67,7 @@
 .filter__label--checkbox {
   position: relative;
   padding-left: 21px;
+  color: #222222;
 
   &::before {
     content: "";
@@ -64,6 +78,18 @@
     left: -25px;
     border: 1px solid #cfcfcf;
     background-color: #ffffff;
+  }
+
+  &:hover {
+    color: #222222;
+
+    &::before {
+      border-color: #bababa;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
