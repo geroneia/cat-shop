@@ -3,8 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  width: 200px;
-  padding-left: 43px;
+  padding-left: 45px;
+  padding-right: 47px;
   margin-bottom: 0;
 }
 
@@ -46,6 +46,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .range-slider {
+    width: 708px;
+    padding-left: 70px;
+    padding-right: 74px;
+  }
+
   .range-slider__scale {
     width: 428px;
     height: 6px;
@@ -82,5 +88,21 @@
   .range-slider__finish {
     font-size: 20px;
     line-height: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #bebebe;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .range-slider {
+    width: 690px;
+    padding-left: 80px;
+    padding-right: 45px;
+    padding-top: 0;
+  }
+
+  .range-slider__start,
+  .range-slider__finish {
+    margin-top: 2px;
   }
 }
