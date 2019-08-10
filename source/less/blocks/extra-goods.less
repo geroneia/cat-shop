@@ -1,0 +1,126 @@
+.extra-goods__title {
+  display: flex;
+  align-items: top;
+  text-align: left;
+  min-width: 280px;
+  padding: 0;
+  padding-bottom: 14px;
+  font-family: @font-headings;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: #111111;
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: block;
+    margin-left: 22px;
+    left: 100%;
+    width: 1300px;
+    height: 3px;
+    margin-top: 14px;
+    background-color: @green;
+    text-align: right;
+  }
+}
+
+.extra-goods__list {
+  padding: 0;
+  list-style: none;
+}
+
+.extra-goods__item {
+  border-top: 1px solid #cdcdcd;
+}
+
+.extra-goods__item--vitamins {
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.extra-goods__item-title {
+  margin-right: 0;
+  margin-top: 13px;
+  margin-left: 2px;
+  margin-bottom: 14px;
+  padding: 0;
+  font-family: @font-headings;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.extra-goods__description {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  margin-bottom: 14px;
+  font-family: @font-general;
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+}
+
+.extra-goods__price {
+  margin-left: auto;
+  text-transform: uppercase;
+}
+
+.extra-goods__order {
+  width: 280px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 17px;
+  background-color: @green;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.extra-goods__gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 34px;
+  background-color: @green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.extra-goods__image {
+  margin-top: 65px;
+
+  path {
+    fill: #ffffff;
+  }
+}
+
+.extra-goods__gift-descriprion {
+  margin: 0;
+  margin-top: 61px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 0;
+  padding-bottom: 42px;
+  font-family: @font-general;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  // Как выровнять здесь текст, если не через pre и без br?
+}
