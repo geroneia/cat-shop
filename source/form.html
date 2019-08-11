@@ -32,27 +32,27 @@
   </header>
 
   <main class="page-main">
-    <section class="program-selection container">
-      <h1 class="program-selection__title">Подбор программы</h1>
-      <p class="program-selection__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+    <section class="program-selection">
+      <h1 class="program-selection__title container">Подбор программы</h1>
+      <p class="program-selection__text  container">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form class="program-selection__form form" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset class="form__profile">
+        <fieldset class="form__profile container">
           <ul class="form__profile-list">
             <li class="form__profile-option">
               <label class="form__profile-label" for="name">Имя:*</label>
               <input class="form__name" type="text" name="name" placeholder="Барсик" id="name">
             </li>
             <li class="form__profile-option"></li>
-            <label class="form__profile-label" for="weight">Вес (кг):*</label>
-            <input class="form__weight" type="text" name="weight" placeholder="7" id="weight">
+              <label class="form__profile-label" for="weight">Вес (кг):*</label>
+              <input class="form__weight" type="text" name="weight" placeholder="7" id="weight">
             </li>
             <li class="form__profile-option"></li>
-            <label class="form__profile-label" for="age">Возраст (лет):</label>
-            <input class="form__age" type="age" name="age" placeholder="7" id="age">
+              <label class="form__profile-label" for="age">Возраст (лет):</label>
+              <input class="form__age" type="age" name="age" placeholder="7" id="age">
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__program filter">
+        <fieldset class="form__program filter container">
           <ul class="filter__list filter__list-program">
             <li class="filter__option">
               <input class="filter__input filter__input--radio" type="radio" name="program" value="weight-loss"
@@ -73,7 +73,7 @@
         </fieldset>
         <fieldset class="form__owner-contacts">
           <legend class="form__description form__description--owner">Контактные&nbsp;данные (владельца кота)</legend>
-          <ul class="form__list">
+          <ul class="form__list container">
             <li class="form__item form__item--email">
               <label class="form__item-label form__item-label--email" for="email">E-mail:*</label>
               <input class="form__email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
@@ -88,7 +88,7 @@
           <legend class="form__description form__description--comment">Комментарий</legend>
           <textarea class="form__comment-text">Расскажите обо всех повадках кота</textarea>
         </fieldset>
-        <fieldset class="form__extra filter">
+        <fieldset class="form__extra filter container">
           <legend class="form__description form__description--extra">Дополнительно</legend>
           <ul class="filter__list filter__list-extra">
             <li class="filter__option filter__option--extra">
@@ -112,7 +112,7 @@
             </li>
           </ul>
         </fieldset>
-        <button class="program-selection__button button" type="submit">Отправить заявку</button>
+        <button class="program-selection__button button container" type="submit">Отправить заявку</button>
       </form>
       <p class="program-selection__note">* — Обязательные поля</p>
     </section>
