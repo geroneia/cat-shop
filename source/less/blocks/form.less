@@ -42,9 +42,9 @@
   margin-right: 14px;
   padding-top: 14px;
 
-  &:last-of-type {
-    margin-right: 12px;
-  }
+  // &:last-of-type {
+  //   margin-right: 12px;
+  // }
 }
 
 .form__profile-list {
@@ -134,11 +134,12 @@
   display: flex;
   justify-content: flex-start;
   position: relative;
+  align-items: flex-start;
 }
 
 .form__item-label {
   padding-top: 13px;
-  padding-right: 11px;
+  margin-right: 11px;
 }
 
 .form__owner-contacts {
@@ -219,7 +220,7 @@
 }
 
 .form__item-label--tel {
-  padding-right: 5px;
+  margin-right: 5px;
 }
 
 .form__description--comment {
@@ -313,7 +314,7 @@
 
   .form__profile-label {
     padding-left: 40px;
-    margin-right: 17px;
+    margin-right: 18px;
     padding-top: 15px;
   }
 
@@ -333,7 +334,7 @@
   }
 
   .form__program {
-    min-width: 630px;
+    width: 630px;
     margin-bottom: 45px;
     font-size: 20px;
     line-height: 20px;
@@ -387,7 +388,7 @@
 
   .form__item-label {
     padding-top: 16px;
-    padding-right: 19px;
+    margin-right: 19px;
   }
 
   .form__email,
@@ -412,7 +413,7 @@
 
   .form__item-label--tel {
     padding-top: 18px;
-    padding-right: 10px;
+    margin-right: 10px;
   }
 
   .form__item--email {
@@ -453,5 +454,113 @@
     padding-bottom: 13px;
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 38px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+    width: 1300px;
+  }
+
+  .form__profile {
+    width: 570px;
+    margin: 0;
+    margin-right: 78px;
+    padding: 0;
+
+  }
+
+  .form__profile-label {
+    padding-left: 0;
+    margin-right: 18px;
+  }
+
+  .form__name {
+    width: 506px;
+    margin-bottom: 20px;
+  }
+
+  .form__weight {
+    width: 475px;
+    margin-bottom: 20px;
+  }
+
+  .form__age {
+    width: 432px;
+    margin-bottom: 0;
+  }
+
+  .form__program {
+    width: 570px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form__description {
+    min-width: 1440px;
+    margin-right: 0;
+
+    &::before {
+      width: 70px;
+    }
+  }
+  .form__list {
+    // display: flex;
+    // justify-content: flex-start;
+    padding-left: 110px;
+  }
+
+  .form__item-label {
+    margin-right: 22px;
+  }
+
+  .form__item-label--tel {
+    margin-right: 15px;
+  }
+
+  .form__email {
+    width: 486px;
+  }
+
+  .form__tel {
+    width: 472px;
+  }
+
+  .form__item--email {
+    min-width: 570px;
+    &::after {
+      top: 20px;
+      left: 533px;
+    }
+  }
+
+  .form__item--tel {
+    min-width: 570px;
+    &::after {
+      top: 17px;
+      left: 534px;
+    }
+  }
+
+  .form__comment {
+    padding-left: 220px;
+  }
+
+  .form__comment-text {
+    width: 1220px;
+    margin-left: 0;
   }
 }

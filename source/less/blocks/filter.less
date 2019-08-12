@@ -193,3 +193,40 @@
     left: -15px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .filter__list {
+    width: 570px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 34px;
+    border: 1px solid #ededed;
+  }
+
+  .filter__list-extra {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 1220px;
+    margin-left: 113px;
+    margin-right: 110px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 8px;
+    border: none;
+  }
+
+  .filter__option--extra {
+    width: 245px;
+    margin-right: 80px;
+    margin-bottom: 57px;
+    // outline: 2px solid hotpink;
+
+    &:nth-child(2n) {
+      margin-right: 80px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
