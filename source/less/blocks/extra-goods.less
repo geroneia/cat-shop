@@ -127,3 +127,136 @@
   color: #ffffff;
   // Как выровнять здесь текст, если не через pre и без br?
 }
+
+@media (min-resolution: 2dppx) {
+  .extra-goods__gift {
+    background: no-repeat 0 0 url("../img/gift-photo-mobile@2x.jpg");
+  }
+  // Верно ли я подключаю изображение для ретины?
+}
+
+@media (min-width: @tablet-width) {
+  .extra-goods__title {
+    min-width: 708px;
+    padding: 0;
+    padding-bottom: 50px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      height: 3px;
+      margin-top: 22px;
+      background-color: @green;
+      text-align: right;
+    }
+
+    &::after {
+      margin-left: 38px;
+      left: 100%;
+      width: 100px;
+    }
+
+    &::before {
+      margin-right: 38px;
+      right: 0;
+      width: 29px;
+    }
+  }
+
+  .extra-goods__item {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 1px solid #cdcdcd;
+    border-bottom: none;
+  }
+
+  .extra-goods__item--vitamins {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .extra-goods__list {
+    padding: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .extra-goods__item-title {
+    min-width: 324px;
+    padding-right: 0;
+    padding-top: 26px;
+    padding-left: 37px;
+    padding-bottom: 24px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extra-goods__description {
+    min-width: 324px;
+    justify-content: flex-end;
+    margin-left: 50px;
+    margin-bottom: 0;
+    padding-top: 30px;
+    padding-left: 0;
+    padding-right: 30px;
+    padding-bottom: 21px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .extra-goods__price {
+    margin-left: 52px;
+  }
+
+  .extra-goods__item--water .extra-goods__price {
+    margin-left: 59px;
+  }
+
+  .extra-goods__order {
+    width: 633px;
+    margin-bottom: 27px;
+    margin-left: 36px;
+  }
+
+  .extra-goods__gift {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 69px;
+    margin-bottom: 76px;
+    background-color: @green;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-size: contain;
+  }
+
+  .extra-goods__image {
+    margin-top: 65px;
+    margin-left: 90px;
+  }
+
+  .extra-goods__gift-descriprion {
+    width: 287px;
+    margin: 0;
+    margin-top: 72px;
+    padding: 0;
+    padding-right: 124px;
+    padding-bottom: 68px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @tablet-width) and (min-resolution: 2dppx) {
+  .extra-goods__gift {
+    background: no-repeat 0 0 url("../../img/gift-photo-tablet@2x.jpg");
+    // Размер чего указывается через / после background-position?
+  }
+}
