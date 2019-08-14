@@ -41,11 +41,11 @@
           <ul class="form__profile-list">
             <li class="form__profile-option">
               <label class="form__profile-label" for="name">Имя:*</label>
-              <input class="form__name" type="text" name="name" placeholder="Барсик" id="name">
+              <input class="form__name" type="text" name="name" placeholder="Барсик" pattern="[А-Яа-яЁё]{1,15}" id="name" required>
             </li>
             <li class="form__profile-option">
               <label class="form__profile-label" for="weight">Вес (кг):*</label>
-              <input class="form__weight" type="text" name="weight" placeholder="7" id="weight">
+              <input class="form__weight" type="text" name="weight" placeholder="7" pattern="[0-9]{1,2}" id="weight" required>
             </li>
             <li class="form__profile-option">
               <label class="form__profile-label" for="age">Возраст (лет):</label>
@@ -78,11 +78,11 @@
           <ul class="form__list container">
             <li class="form__item form__item--email">
               <label class="form__item-label form__item-label--email" for="email">E-mail:*</label>
-              <input class="form__email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+              <input class="form__email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
             </li>
             <li class="form__item form__item--tel">
               <label class="form__item-label form__item-label--tel" for="tel">Телефон:*</label>
-              <input class="form__tel" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90">
+              <input class="form__tel" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90" pattern="[0-9]{11}" required>
             </li>
           </ul>
         </fieldset>
@@ -156,6 +156,42 @@
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>
   </footer>
+
+    <script>
+window.addEventListener("DOMContentLoaded", function() {
+function setCursorPosition(pos, elem) {
+    elem.focus();
+    if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
+    else if (elem.createTextRange) {
+        var range = elem.createTextRange();
+        range.collapse(true);
+        range.moveEnd("character", pos);
+        range.moveStart("character", pos);
+        range.select()
+    }
+}
+
+function mask(event) {
+    var matrix = "8 (___) ___-__-__",
+        i = 0,
+        def = matrix.replace(/\D/g, ""),
+        val = this.value.replace(/\D/g, "");
+    if (def.length >= val.length) val = def;
+    this.value = matrix.replace(/./g, function(a) {
+        return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+    });
+    if (event.type == "blur") {
+        if (this.value.length == 2) this.value = ""
+    } else setCursorPosition(this.value.length, this)
+};
+    var input = document.querySelector("#tel");
+    input.addEventListener("input", mask, false);
+    input.addEventListener("focus", mask, false);
+    input.addEventListener("blur", mask, false);
+});
+  </script>
+
+
 </body>
 
 </html>
