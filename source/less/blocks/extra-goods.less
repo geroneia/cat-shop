@@ -1,6 +1,5 @@
 .extra-goods__title {
   display: flex;
-  align-items: top;
   text-align: left;
   min-width: 280px;
   padding: 0;
@@ -113,7 +112,7 @@
   }
 }
 
-.extra-goods__gift-descriprion {
+.extra-goods__gift-description {
   margin: 0;
   margin-top: 61px;
   padding-left: 60px;
@@ -126,14 +125,12 @@
   line-height: 20px;
   text-align: center;
   color: #ffffff;
-  // Как выровнять здесь текст, если не через pre и без br?
 }
 
 @media (min-resolution: 2dppx) {
   .extra-goods__gift {
     background: no-repeat 0 0 url("../img/gift-photo-mobile@2x.jpg");
   }
-  // Верно ли я подключаю изображение для ретины?
 }
 
 @media (min-width: @tablet-width) {
@@ -241,7 +238,7 @@
     margin-left: 90px;
   }
 
-  .extra-goods__gift-descriprion {
+  .extra-goods__gift-description {
     width: 287px;
     margin: 0;
     margin-top: 72px;
@@ -256,8 +253,7 @@
 
 @media (min-width: @tablet-width) and (min-resolution: 2dppx) {
   .extra-goods__gift {
-    background: no-repeat 0 0 url("../../img/gift-photo-tablet@2x.jpg");
-    // Размер чего указывается через / после background-position?
+    background: no-repeat 0 0 url("../img/gift-photo-tablet@2x.jpg");
   }
 }
 
@@ -345,7 +341,7 @@
     margin-bottom: 62px;
   }
 
-  .extra-goods__gift-descriprion {
+  .extra-goods__gift-description {
     width: 205px;
     margin: 0;
     padding: 0;
@@ -357,6 +353,6 @@
 
 @media (min-width: @desktop-width) and (min-resolution: 2dppx) {
   .extra-goods__gift {
-    background: no-repeat 0 0 url("../../img/gift-photo-desktop@2x.jpg");
+    background: no-repeat 0 0 url("../img/gift-photo-desktop@2x.jpg");
   }
 }
