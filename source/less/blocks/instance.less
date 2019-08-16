@@ -63,6 +63,7 @@
   padding-left: 14px;
   padding-right: 14px;
   text-transform: none;
+  background-color: #ffffff;
 }
 
 .instance__sum {
@@ -97,8 +98,8 @@
   flex-shrink: 0;
 
   .instance__image {
-    font-family: "object-fit: cover; object-position: left;", sans-serif;
-    // что это за странное свойство?
+    object-fit: cover; 
+    object-position: left;
   }
 }
 
@@ -106,7 +107,8 @@
   flex-shrink: 2;
 
   .instance__image {
-    font-family: "object-fit: cover; object-position: right;", sans-serif;
+    object-fit: cover;
+    object-position: right;
   }
 }
 
@@ -127,6 +129,9 @@
 
 .instance__range {
   padding-bottom: 35px;
+  padding-top: 370px;
+  padding-left: 0;
+  width: 570px
 }
 
 @media (min-width: @tablet-width) {
@@ -134,14 +139,24 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    background-color: #ffffff;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .instance__column:first-child {
-    margin-bottom: 57px;
-  }
+  // .instance__column {
+  //   margin-bottom: 220px;
+  // }
 
-  .instance__column:last-child {
-    margin-bottom: 58px;
+  // .instance__column:first-child {
+  //   margin-bottom: 57px;
+  // }
+
+  // .instance__column:last-child {
+  //   margin-bottom: 58px;
+  // }
+  .instance__column {
+    margin-bottom: 220px;
   }
 
   .instance__wrapper {
@@ -152,15 +167,23 @@
     margin: 0;
     padding-top: 43px;
     padding-bottom: 48px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-size: 60px;
     line-height: 60px;
   }
 
   .instance__text {
     padding-bottom: 37px;
-    padding-right: 14px;
+    padding-right: 44px;
+    padding-left: 30px;
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .instance__wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .instance__value {
@@ -172,6 +195,7 @@
     padding-bottom: 17px;
     font-size: 30px;
     line-height: 37px;
+    background-color: #ffffff;
 
     &:nth-child(2) .instance__data {
       width: 143px;
@@ -206,19 +230,39 @@
       margin-bottom: 10px;
     }
   }
+  // Фон слайдера
+
+  .instance__column-slider {
+      position: relative;
+      background-color: #f2f2f2;
+      padding-top: 356px;
+      padding-bottom: 59px;
+      margin-bottom: 0;
+      background-image: linear-gradient(to left, #eaeaea 384px, #f2f2f2 384px);
+  }
 
   .instance__slider-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -170px;
     width: 690px;
-    margin-left: 15px;
-    margin-bottom: 17px;
+    margin: 0;
+    // width: 690px;
+    // margin-left: 15px;
+    // margin-bottom: 17px;
   }
 
   .instance__image {
-    height: 499px;
+    height: 517px;
   }
 
-  .instance__range {
-    padding-left: 69px;
+  .instance__photo-wrapper--fat-cat {
+    width: 50%;
+  }
+
+   .instance__range {
+    // padding-left: 69px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -243,11 +287,18 @@
   .instance__title {
     padding-top: 63px;
     padding-bottom: 129px;
+    padding-left: 110px;
+    padding-right: 110px;
   }
 
   .instance__text {
     padding-bottom: 52px;
-    padding-right: 137px;
+    padding-right: 27px;
+    padding-left: 110px;
+  }
+
+  .instance__wrapper {
+    padding-left: 110px;
   }
 
   .instance__sum {
@@ -262,8 +313,15 @@
     text-align: left;
   }
 
+  .instance__column-slider {
+    margin-left: 110px;
+    margin-top: 198px;
+    margin-bottom: 0;
+  }
+
   .instance__slider-wrapper {
     width: 690px;
+    top: -200px;
     margin-left: -1px;
     margin-top: 7px;
     margin-bottom: 34px;
