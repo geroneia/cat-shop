@@ -3,9 +3,9 @@
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  width: 200px;
-  padding-left: 43px;
-  margin-bottom: 33px;
+  padding-left: 45px;
+  padding-right: 47px;
+  margin-bottom: 0;
 }
 
 .range-slider__scale {
@@ -19,17 +19,29 @@
   border: 1px solid #cdcdcd;
   border-radius: 7px;
   flex-shrink: 0;
+  cursor: pointer;
   // outline: 2px solid lightcoral;
 }
 
 .range-slider__pin {
   position: absolute;
   top: 3px;
-  left: 6px;
+  left: 5px;
   width: 35px;
   height: 6px;
   border-radius: 3px;
   background-color: @green;
+}
+
+
+.range-slider__pin--before {
+  right: auto;
+  left: 5px;
+}
+
+.range-slider__pin--after {
+  right: 5px;
+  left: auto;
 }
 
 .range-slider__start,
@@ -46,6 +58,13 @@
 }
 
 @media (min-width: @tablet-width) {
+  .range-slider {
+    background-color: transparent;
+    width: 708px;
+    padding-left: 99px;
+    padding-right: 40px;
+  }
+
   .range-slider__scale {
     width: 428px;
     height: 6px;
@@ -82,5 +101,21 @@
   .range-slider__finish {
     font-size: 20px;
     line-height: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #bebebe;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .range-slider {
+    width: 690px;
+    padding-left: 80px;
+    padding-right: 45px;
+    padding-top: 0;
+  }
+
+  .range-slider__start,
+  .range-slider__finish {
+    margin-top: 2px;
   }
 }

@@ -1,0 +1,57 @@
+.options {
+  border-collapse: collapse;
+
+  tr {
+    padding: 0;
+  }
+
+  td {
+    vertical-align: center;
+    padding: 0;
+  }
+}
+
+.options__value {
+  // display: block;
+  text-align: right;
+}
+
+@media (min-width: @tablet-width) {
+  .options {
+    margin-bottom: 33px;
+
+    tr {
+      width: 250px;
+      border-bottom: 1px solid #cdcdcd;
+    }
+
+    td {
+      width: 125px;
+      padding-bottom: 7px;
+      padding-top: 8px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .options {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+
+    tr {
+      display: table-row;
+      width: 169px;
+      padding: 0;
+      margin: 0;
+    }
+
+    td {
+      display: table-cell;
+      width: 84px;
+      padding-bottom: 0;
+      padding-top: 0;
+      // Не понимаю, как убрать отступы сверху и снизу у ячеек. Они достаются им от tr?
+    }
+  }
+}

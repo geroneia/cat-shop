@@ -98,13 +98,30 @@
   &::after {
     position: absolute;
     content: "";
-    top: 12px;
+    top: 8px;
     left: 116px;
     width: 24px;
     height: 11px;
     background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+  }
+
+  &:hover&::after {
+    width: 33px;
+    height: 11px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active&::after {
+    width: 33px;
+    height: 11px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
   }
 }
 
@@ -125,8 +142,8 @@
   }
 
   .programs__title {
-    margin-left: 55px;
-    margin-bottom: 26px;
+    margin-left: 54px;
+    margin-bottom: 25px;
     font-size: 36px;
 
     &::before {
@@ -147,7 +164,7 @@
   }
 
   .programs__description {
-    margin-left: 54px;
+    margin-left: 53px;
     margin-right: 282px;
     padding-bottom: 0;
     font-size: 16px;
@@ -198,6 +215,10 @@
 
   .programs__description {
     margin-right: 38px;
+
+    br {
+      display: none;
+    }
   }
 
   .programs__item--slim {
