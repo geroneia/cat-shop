@@ -77,6 +77,11 @@
   text-transform: uppercase;
 }
 
+.instance__column-slider {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .instance__slider-wrapper {
   position: relative;
   display: flex;
@@ -128,9 +133,9 @@
 
 .instance__range {
   padding-bottom: 35px;
-  padding-top: 370px;
-  padding-left: 0;
-  width: 570px;
+  padding-left: 64px;
+  padding-right: 66px;
+  width: 200px;
 }
 
 @media (min-width: @tablet-width) {
@@ -141,6 +146,7 @@
     background-color: #ffffff;
     padding-left: 0;
     padding-right: 0;
+    border-top: 1px solid #e6e6e6;
   }
 
   // .instance__column {
@@ -160,24 +166,24 @@
 
   .instance__wrapper {
     justify-content: flex-start;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .instance__title {
     margin: 0;
     padding-top: 43px;
     padding-bottom: 48px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 0;
+    padding-right: 0;
     font-size: 60px;
     line-height: 60px;
   }
 
   .instance__text {
     padding-bottom: 37px;
-    padding-right: 44px;
-    padding-left: 30px;
+    padding-right: 14px;
+    padding-left: 0;
     font-size: 16px;
     line-height: 24px;
   }
@@ -207,6 +213,7 @@
     width: 116px;
     padding-left: 8px;
     padding-right: 8px;
+    background-color: #ffffff;
   }
 
   .instance__sum {
@@ -226,7 +233,6 @@
       margin-bottom: 10px;
     }
   }
-  // Фон слайдера
 
   .instance__column-slider {
     position: relative;

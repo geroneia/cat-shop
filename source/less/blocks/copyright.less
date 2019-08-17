@@ -1,28 +1,27 @@
 .copyright__link {
-  display: flex;
+  position: relative;
+  display: inline-block;
   text-decoration: none;
-  justify-content: space-between;
-  // padding-top: 30px;
-  // padding-bottom: 31px;
-  width: 162px;
-
-  span {
-    display: inline-block;
-    vertical-align: bottom;
-    width: 115px;
-    font-family: @font-general;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 16px;
-    color: #444444;
-  }
+  // justify-content: space-between;
+  margin-top: 30px;
+  // align-items: flex-start;
+  vertical-align: top;
+  width: 280px;
+  font-family: @font-general;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #444444;
 }
 
 .copyright__icon {
-  margin-left: auto;
-  width: 27px;
-  height: 34px;
-  margin-top: 2px;
+  position: absolute;
+  // margin-left: auto;
+  width: 42px;
+  height: 62px;
+  top: -22px;
+  right: -13px;
+  // Попробовала через абсолютное позиционирование. И просто подобрала размеры. Не понимаю, почему конкретно эта картинка так ведет себя
 
   path {
     fill: #666666;
@@ -42,10 +41,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .copyright__link {
+    padding-top: 37px;
+  }
+
   .copyright__icon {
-    // margin: auto;
-    width: 27px;
-    height: 34px;
-    // margin-top: 40px;
+    top: 15px;
+    right: 105px;
   }
 }
