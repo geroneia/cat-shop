@@ -1,0 +1,358 @@
+.extra-goods__title {
+  display: flex;
+  text-align: left;
+  min-width: 280px;
+  padding: 0;
+  padding-left: 12%;
+  // padding-left: 100px;
+  padding-bottom: 14px;
+  font-family: @font-headings;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: #111111;
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: block;
+    margin-left: 22px;
+    left: 100%;
+    width: 16.5%;
+    height: 3px;
+    margin-top: 14px;
+    background-color: @green;
+    text-align: right;
+  }
+}
+
+.extra-goods__list {
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  list-style: none;
+}
+
+.extra-goods__item {
+  border-top: 1px solid #cdcdcd;
+}
+
+.extra-goods__item--vitamins {
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.extra-goods__item-title {
+  margin-right: 0;
+  margin-top: 13px;
+  margin-left: 2px;
+  margin-bottom: 14px;
+  padding: 0;
+  font-family: @font-headings;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.extra-goods__description {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  margin-bottom: 14px;
+  font-family: @font-general;
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+}
+
+.extra-goods__price {
+  margin-left: auto;
+  text-transform: uppercase;
+}
+
+.extra-goods__order {
+  width: 280px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 17px;
+  background-color: @green;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.extra-goods__gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 34px;
+  background-color: @green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.extra-goods__image {
+  margin-top: 65px;
+
+  path {
+    fill: #ffffff;
+  }
+}
+
+.extra-goods__gift-description {
+  margin: 0;
+  margin-top: 61px;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 0;
+  padding-bottom: 42px;
+  font-family: @font-general;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (min-resolution: 2dppx) {
+  .extra-goods__gift {
+    background: no-repeat 0 0 url("../img/gift-photo-mobile@2x.jpg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .extra-goods__title {
+    min-width: 708px;
+    padding: 0;
+    padding-bottom: 50px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      height: 3px;
+      margin-top: 22px;
+      background-color: @green;
+      text-align: right;
+    }
+
+    &::after {
+      margin-left: 38px;
+      left: 100%;
+      width: 13%;
+    }
+
+    &::before {
+      margin-right: 38px;
+      right: 0;
+      width: 9%;
+    }
+  }
+
+  .extra-goods__item {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 1px solid #cdcdcd;
+    border-bottom: none;
+  }
+
+  .extra-goods__item--vitamins {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .extra-goods__list {
+    padding: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .extra-goods__item-title {
+    min-width: 324px;
+    padding-right: 0;
+    padding-top: 26px;
+    padding-left: 37px;
+    padding-bottom: 24px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extra-goods__description {
+    min-width: 324px;
+    justify-content: flex-end;
+    margin-left: 50px;
+    margin-bottom: 0;
+    padding-top: 30px;
+    padding-left: 0;
+    padding-right: 30px;
+    padding-bottom: 21px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .extra-goods__price {
+    margin-left: 52px;
+  }
+
+  .extra-goods__item--water .extra-goods__price {
+    margin-left: 59px;
+  }
+
+  .extra-goods__order {
+    width: 633px;
+    margin-bottom: 27px;
+    margin-left: 36px;
+  }
+
+  .extra-goods__gift {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 69px;
+    margin-bottom: 76px;
+    background-color: @green;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-size: contain;
+  }
+
+  .extra-goods__image {
+    margin-top: 65px;
+    margin-left: 90px;
+  }
+
+  .extra-goods__gift-description {
+    width: 287px;
+    margin: 0;
+    margin-top: 72px;
+    padding: 0;
+    padding-right: 124px;
+    padding-bottom: 68px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @tablet-width) and (min-resolution: 2dppx) {
+  .extra-goods__gift {
+    background: no-repeat 0 0 url("../img/gift-photo-tablet@2x.jpg");
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra-goods__title {
+    min-width: 1300px;
+    padding: 0;
+    padding-bottom: 50px;
+
+    &::after {
+      width: 52%;
+    }
+
+    &::before {
+      width: 15.7%;
+    }
+  }
+
+  .extra-goods__list {
+    position: relative;
+    padding-left: 110px;
+    padding-right: 355px;
+  }
+
+  .extra-goods__item {
+    width: 895px;
+    border-left: none;
+    border-right: none;
+  }
+
+  .extra-goods__item-title {
+    min-width: 285px;
+    padding-right: 0;
+    padding-top: 26px;
+    padding-left: 0;
+    padding-bottom: 24px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extra-goods__description {
+    min-width: 285px;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-bottom: 0;
+    padding-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 21px;
+  }
+
+  .extra-goods__price {
+    margin-left: 0;
+  }
+
+  .extra-goods__item--water .extra-goods__price {
+    margin-left: 0;
+    padding-right: 6px;
+  }
+
+  .extra-goods__order {
+    width: 245px;
+    margin-bottom: 15px;
+    margin-left: 39px;
+    margin-top: 15px;
+  }
+
+  .extra-goods__gift {
+    position: absolute;
+    top: 0;
+    right: 111px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 245px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
+
+  .extra-goods__image {
+    margin-top: 65px;
+    margin-left: 96px;
+    margin-bottom: 62px;
+  }
+
+  .extra-goods__gift-description {
+    width: 205px;
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    padding-bottom: 42px;
+    text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) and (min-resolution: 2dppx) {
+  .extra-goods__gift {
+    background: no-repeat 0 0 url("../img/gift-photo-desktop@2x.jpg");
+  }
+}
