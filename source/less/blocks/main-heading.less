@@ -8,6 +8,10 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   text-align: center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .main-heading__title {
@@ -120,6 +124,10 @@
         linear-gradient(to bottom, #64a93c 696px, #ffffff 696px);
       background-repeat: no-repeat;
       background-position: top right;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 

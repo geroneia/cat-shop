@@ -42,9 +42,9 @@
         Занялся собой? Займись котом!
       </span>
       <picture class="main-heading__wrap-img">
-        <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
-        <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
-        <img class="main-heading__img" src="img/index-can-mobile@1x.png" width="280" height="270"
+        <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+        <img class="main-heading__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@1x.png 2x" width="280" height="270"
           alt="Cat Energy с курицей">
       </picture>
       <a class="main-heading__button button" href="form.html">Подобрать программу</a>
@@ -116,16 +116,17 @@
         <div class="instance__slider-wrapper">
           <div class="instance__photo-wrapper instance__photo-wrapper--fat-cat instance__photo-wrapper--appearance">
             <picture>
-              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-              <img class="instance__image" src="img/before-mobile@1x.png" alt="Борис был толстым">
+              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+              <img class="instance__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Борис стал стройным alt="Борис был толстым">
             </picture>
           </div>
           <div class="instance__photo-wrapper instance__photo-wrapper--slim-cat">
             <picture>
-              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
-              <img class="instance__image" src="img/after-mobile@1x.png" alt="Борис стал стройным">
+              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+              <img class="instance__image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="257" height="240"
+              alt="Борис стал стройным">
             </picture>
           </div>
         </div>
@@ -150,12 +151,15 @@
           <p class="contacts__town">Санкт-Петербург</p>
         </address>
       </div>
-      <picture class="contacts__map">
-        <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
-        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
-        <img class="contacts__map-img" src="img/bg-map-mobile@1x.png" width="320" height="363"
-          alt="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
-      </picture>
+    <div class="contacts__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1566157094011!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
+          <img class="contacts__map-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="363"
+            alt="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+        </picture>
+      </div>
     </section>
   </main>
   <footer class="page-footer container">
