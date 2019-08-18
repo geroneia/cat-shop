@@ -40,14 +40,14 @@
   position: relative;
   display: block;
   width: 320px;
-  height: 362px;
+  height: 363px;
   margin: 0 auto;
   overflow: hidden;
 
   &::after {
     content: "";
     position: absolute;
-    top: 139px;
+    top: 127px;
     left: 129px;
     width: 55px;
     height: 53px;
@@ -55,6 +55,16 @@
     background-position: 0 0;
     background-size: 62px auto;
     background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
   }
 }
 
@@ -101,19 +111,13 @@
     height: 398px;
 
     &::after {
-      content: "";
-      position: absolute;
-      top: 145px;
+      top: 90px;
       left: 317px;
       width: 133px;
       height: 106px;
-      background-image: url("../../img/map-pin.png");
-      background-position: 0 0;
       background-size: 100%;
-      background-repeat: no-repeat;
     }
   }
-  // Я как-то неправильно стилизовала карту, теперь она не меняется на десктопную и планшетнуюю версию. Хотя до того, как я изменила область карты, которая показывается, через абсолютное позиционирование, она менялась
 }
 
 @media (min-width: @desktop-width) {
@@ -137,6 +141,7 @@
   .contacts__text {
     margin-right: 80px;
     padding-left: 75px;
+    padding-top: 38px;
   }
 
   .contacts__street {
@@ -145,11 +150,20 @@
 
   .contacts__address {
     text-align: left;
+    padding-top: 36px;
   }
 
   .contacts__map {
     width: 1440px;
     height: 400px;
     // outline: 2px dotted red;
+
+    &::after {
+      top: 91px;
+      left: 45.4%;
+      width: 133px;
+      height: 106px;
+      background-size: 100%;
+    }
   }
 }

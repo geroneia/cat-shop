@@ -8,6 +8,10 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   text-align: center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .main-heading__title {
@@ -104,45 +108,51 @@
   .main-heading {
     position: relative;
     min-height: 566px;
-    padding-top: 106px;
-    margin-bottom: 20px;
+    padding-top: 105px;
+    padding-left: 108px;
+    margin-bottom: 17px;
 
     &::after {
       content: "";
       position: absolute;
       z-index: -1;
-      top: -114px;
-      right: 0;
+      top: -117px;
+      right: 2px;
       width: 718px;
       height: 696px;
       background-image: url("../img/index-background-desktop@1x.jpg"),
         linear-gradient(to bottom, #64a93c 696px, #ffffff 696px);
       background-repeat: no-repeat;
       background-position: top right;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 
   .main-heading__title {
     margin-left: 84px;
     margin-right: 720px;
-    margin-bottom: 41px;
+    margin-bottom: 42px;
   }
 
   .main-heading__slogan {
-    margin-left: 85px;
-    margin-bottom: 53px;
+    margin-left: 84px;
+    margin-bottom: 50px;
   }
 
   .main-heading__img {
     position: absolute;
-    top: 22px;
-    left: calc(50% - 157px);
+    top: 25px;
+    left: calc(50% - 159px);
     width: 552px;
     height: 499px;
   }
 
   .main-heading__button {
-    left: 105px;
-    top: 340px;
+    left: 102px;
+    top: 339px;
+    padding-bottom: 17px;
   }
 }

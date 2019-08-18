@@ -91,20 +91,18 @@
     margin-left: 60px;
     padding-right: 65px;
     padding-left: 0;
-    padding-top: 154px;
+    padding-top: 155px;
     font-size: 16px;
     line-height: 24px;
 
     &:last-child {
-      margin-bottom: 103px;
+      margin-bottom: 100px;
     }
 
     &::before {
       counter-increment: benefits__item;
       content: counter(benefits__item) "";
       position: absolute;
-      top: 4px;
-      left: 115px;
       font-family: @font-headings;
       font-weight: 400;
       font-size: 281px;
@@ -113,9 +111,29 @@
       z-index: -1;
     }
 
+    &:first-child::before {
+      top: 2px;
+      left: 118px;
+    }
+
+    &:nth-child(2)::before {
+      top: 3px;
+      left: 111px;
+    }
+
+    &:nth-child(3)::before {
+      top: 4px;
+      left: 113px;
+    }
+
+    &:nth-child(4)::before {
+      top: 3px;
+      left: 114px;
+    }
+
     &::after {
-      top: 43px;
-      left: 0;
+      top: 41px;
+      left: 1px;
       width: 80px;
       height: 80px;
     }
