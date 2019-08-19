@@ -16,8 +16,9 @@
 }
 
 .product__image-wrap {
-  width: 140px;
-  height: 144px;
+  display: flex;
+  // width: 140px;
+  // height: 144px;
   // У тега picture высота оказывается больше картинки внутри тега img, из-за этого кнопка заказа оказывается ниже, чем нужно.
 }
 
@@ -65,7 +66,7 @@
 @media (min-width: @tablet-width) {
   .product {
     margin-bottom: 23px;
-    background-image: linear-gradient(to bottom, #ffffff 116px, #f2f2f2 116px);
+    background-image: linear-gradient(to bottom, #ffffff 114px, #f2f2f2 114px);
     border-bottom: none;
     padding-left: 0;
   }
@@ -73,7 +74,6 @@
   .product__description {
     flex-direction: column;
     width: 324px;
-    // height: auto;
   }
 
   .product__image {
@@ -85,12 +85,12 @@
 
   .product__image--big-can {
     padding-top: 32px;
-    margin-bottom: 33px;
+    margin-bottom: 37px;
   }
 
   .product__image--small-can {
-    padding-top: 69px;
-    margin-bottom: 32px;
+    padding-top: 68px;
+    margin-bottom: 37px;
   }
 
   .product__wrapper {
@@ -141,7 +141,7 @@
 
   .product__image {
     margin: 0;
-    margin-bottom: 33px;
+    margin-bottom: 37px;
     width: 245px;
     height: auto;
   }

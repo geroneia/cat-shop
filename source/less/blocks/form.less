@@ -21,7 +21,7 @@
 .form__age {
   padding-top: 13px;
   padding-bottom: 12px;
-  padding-left: 15px;
+  padding-left: 14px;
   border: 1px solid #e6e6e6;
 
   &:hover {
@@ -181,7 +181,7 @@
 
 .form__tel {
   width: 204px;
-  padding-left: 14px;
+  padding-left: 19px;
 }
 
 .form__item--email {
@@ -310,23 +310,26 @@
 
   .form__profile-label {
     padding-left: 40px;
-    margin-right: 18px;
+    margin-right: 0;
     padding-top: 15px;
   }
 
   .form__name {
     width: 567px;
     margin-bottom: 20px;
+    margin-left: 17px;
   }
 
   .form__weight {
     width: 536px;
     margin-bottom: 20px;
+    margin-left: 21px;
   }
 
   .form__age {
     width: 497px;
     margin-bottom: 72px;
+    margin-left: 18px;
   }
 
   .form__program {
@@ -340,11 +343,12 @@
   }
 
   .form__description {
+    position: relative;
     min-width: 768px;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 42px;
-    margin-left: 0;
+    margin-left: 9%;
     margin-right: 0;
     text-align: left;
     // justify-content: flex-start;
@@ -353,26 +357,27 @@
     // min-width: 280px;
     // flex-wrap: nowrap;
 
-    &::after,
-    &::before {
-      content: "";
-      display: block;
-      height: 3px;
-      margin-top: 22px;
-      background-color: @green;
-      text-align: right;
-    }
-
     &::after {
+      // content: "";
+      // display: block;
+      // height: 3px;
+      margin-top: 22px;
+      // background-color: @green;
+      text-align: right;
       margin-left: 40px;
       left: 100%;
       width: 100px;
     }
 
     &::before {
-      margin-right: 40px;
-      right: 0;
-      width: 3.5%;
+      content: "";
+      display: block;
+      height: 3px;
+      background-color: @green;
+      position: absolute;
+      top: 51px;
+      left: -68px;
+      width: 30px;
     }
   }
 
@@ -471,10 +476,10 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 38px;
-    padding-left: 47px;
-    padding-right: 30px;
+    padding-left: 110px;
+    padding-right: 110px;
     padding-top: 5px;
-    width: 1300px;
+    width: 1440px;
   }
 
   .form__profile {
@@ -486,18 +491,21 @@
 
   .form__profile-label {
     padding-left: 0;
-    margin-right: 18px;
+    margin-right: 0;
   }
 
   .form__name {
     width: 506px;
     margin-bottom: 20px;
-    padding-left: 16px;
+    padding-left: 19px;
+    padding-top: 9px;
+    margin-left: 16px;
   }
 
   .form__weight {
     width: 475px;
     margin-bottom: 20px;
+    margin-left: 20px;
     padding-left: 19px;
   }
 
@@ -519,9 +527,24 @@
   .form__description {
     min-width: 1440px;
     margin-right: 0;
+    margin-left: 7.6%;
 
     &::before {
-      width: 4.8%;
+      width: 70px;
+      left: -110px;
+      top: 52px;
+    }
+  }
+
+  .form__description--comment {
+    &::before {
+      top: 50px;
+    }
+  }
+
+  .form__description--extra {
+    &::before {
+      top: 47px;
     }
   }
 
