@@ -7,6 +7,7 @@
   margin-left: 6%;
   // padding-left: 100px;
   padding-bottom: 34px;
+  padding-top: 28px;
   font-family: @font-headings;
   font-weight: 400;
   font-size: 24px;
@@ -134,9 +135,12 @@
 
 @media (min-width: @tablet-width) {
   .extra-goods__title {
+    position: relative;
     min-width: 708px;
     padding: 0;
-    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-bottom: 80px;
+    margin-top: 51px;
     font-size: 36px;
     line-height: 36px;
 
@@ -153,13 +157,15 @@
     &::after {
       margin-left: 38px;
       left: 100%;
-      width: 13%;
+      width: 100vw;
     }
 
     &::before {
+      position: absolute;
       margin-right: 38px;
-      right: 0;
-      width: 9%;
+      left: -47px;
+      top: 0;
+      width: 30px;
     }
   }
 
@@ -258,14 +264,18 @@
   .extra-goods__title {
     min-width: 1300px;
     padding: 0;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
+    padding-left: 25px;
+    margin-top: 57px;
 
     &::after {
-      width: 52%;
+      width: 100vw;
     }
 
     &::before {
-      width: 15.7%;
+      width: 70px;
+      left: -84px;
+      top: 0;
     }
   }
 
@@ -273,6 +283,7 @@
     position: relative;
     padding-left: 110px;
     padding-right: 355px;
+    margin-bottom: 86px;
   }
 
   .extra-goods__item {
