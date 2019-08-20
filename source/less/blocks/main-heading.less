@@ -10,7 +10,9 @@
   text-align: center;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-image: url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(to bottom, #63a73a 305px, #ffffff 305px);
+    background-size: 640px auto;
   }
 }
 
@@ -126,7 +128,9 @@
       background-position: top right;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-image: url("../img/index-background-desktop@2x.jpg"),
+          linear-gradient(to bottom, #64a93c 696px, #ffffff 696px);
+        background-size: 1440px auto;
       }
     }
   }
