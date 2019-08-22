@@ -13,7 +13,13 @@
   width: 280px;
   align-items: flex-start;
   // height: 144px;
-  // Не понимаю что задает высоту блоку, который толкает вниз кнопку, что смещает все продукты вниз. Задала высоту здсь, пока разбираюсь
+}
+
+.product__image-wrap {
+  display: flex;
+  // width: 140px;
+  // height: 144px;
+  // У тега picture высота оказывается больше картинки внутри тега img, из-за этого кнопка заказа оказывается ниже, чем нужно.
 }
 
 .product__title {
@@ -59,8 +65,8 @@
 
 @media (min-width: @tablet-width) {
   .product {
-    margin-bottom: 20px;
-    background-image: linear-gradient(to bottom, #ffffff 116px, #f2f2f2 116px);
+    margin-bottom: 23px;
+    background-image: linear-gradient(to bottom, #ffffff 114px, #f2f2f2 114px);
     border-bottom: none;
     padding-left: 0;
   }
@@ -68,7 +74,6 @@
   .product__description {
     flex-direction: column;
     width: 324px;
-    // min-height: 466px;
   }
 
   .product__image {
@@ -79,11 +84,13 @@
   }
 
   .product__image--big-can {
-    padding-top: 34px;
+    padding-top: 32px;
+    margin-bottom: 37px;
   }
 
   .product__image--small-can {
-    padding-top: 70px;
+    padding-top: 68px;
+    margin-bottom: 37px;
   }
 
   .product__wrapper {
@@ -102,6 +109,10 @@
     padding-right: 0;
     font-size: 20px;
     line-height: 20px;
+
+    &:last-of-type br {
+      display: none;
+    }
   }
 
   .product__order {
@@ -110,7 +121,7 @@
     margin-right: 37px;
     padding-left: 95px;
     padding-right: 93px;
-    margin-bottom: 43px;
+    margin-bottom: 40px;
   }
 
   .product__options {
@@ -125,11 +136,12 @@
   .product {
     // outline: 2px solid lawngreen;
     background-image: linear-gradient(to bottom, #ffffff 120px, #f2f2f2 120px);
+    margin-bottom: 20px;
   }
 
   .product__image {
     margin: 0;
-    margin-bottom: 33px;
+    margin-bottom: 37px;
     width: 245px;
     height: auto;
   }
@@ -153,11 +165,11 @@
     width: 169px;
     padding-left: 52px;
     padding-right: 52px;
-    margin-bottom: 36px;
+    margin-bottom: 40px;
   }
 
   .product__options {
-    min-height: 133px;
+    // min-height: 133px;
     width: 169px;
   }
 }

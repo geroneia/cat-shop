@@ -18,7 +18,7 @@
 
 @media (min-width: @tablet-width) {
   .options {
-    margin-bottom: 33px;
+    margin-bottom: 34px;
 
     tr {
       width: 250px;
@@ -35,22 +35,25 @@
 
 @media (min-width: @desktop-width) {
   .options {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 5px;
+    margin-bottom: 33px;
     padding: 0;
+    // height: 92px;
 
     tr {
       display: table-row;
       width: 169px;
       padding: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
       margin: 0;
     }
 
     td {
       display: table-cell;
       width: 84px;
-      padding-bottom: 0;
-      padding-top: 0;
+      height: 30px;
+
       // Не понимаю, как убрать отступы сверху и снизу у ячеек. Они достаются им от tr?
     }
   }

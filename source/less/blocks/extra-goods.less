@@ -7,6 +7,7 @@
   margin-left: 6%;
   // padding-left: 100px;
   padding-bottom: 34px;
+  padding-top: 28px;
   font-family: @font-headings;
   font-weight: 400;
   font-size: 24px;
@@ -106,6 +107,7 @@
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
+    background-size: 560px auto;
   }
 }
 
@@ -134,9 +136,12 @@
 
 @media (min-width: @tablet-width) {
   .extra-goods__title {
+    position: relative;
     min-width: 708px;
     padding: 0;
-    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-bottom: 80px;
+    margin-top: 51px;
     font-size: 36px;
     line-height: 36px;
 
@@ -153,13 +158,15 @@
     &::after {
       margin-left: 38px;
       left: 100%;
-      width: 13%;
+      width: 100vw;
     }
 
     &::before {
+      position: absolute;
       margin-right: 38px;
-      right: 0;
-      width: 9%;
+      left: -47px;
+      top: 0;
+      width: 30px;
     }
   }
 
@@ -233,6 +240,7 @@
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-size: 1416px auto;
     }
   }
 
@@ -256,16 +264,20 @@
 
 @media (min-width: @desktop-width) {
   .extra-goods__title {
-    min-width: 1300px;
+    max-width: 1300px;
     padding: 0;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
+    padding-left: 29px;
+    margin-top: 53px;
 
     &::after {
-      width: 52%;
+      width: 100vw;
     }
 
     &::before {
-      width: 15.7%;
+      width: 70px;
+      left: -84px;
+      top: 0;
     }
   }
 
@@ -273,6 +285,7 @@
     position: relative;
     padding-left: 110px;
     padding-right: 355px;
+    margin-bottom: 86px;
   }
 
   .extra-goods__item {
@@ -315,14 +328,14 @@
   .extra-goods__order {
     width: 245px;
     margin-bottom: 15px;
-    margin-left: 39px;
+    margin-left: 40px;
     margin-top: 15px;
   }
 
   .extra-goods__gift {
     position: absolute;
     top: 0;
-    right: 111px;
+    right: 110px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
@@ -333,6 +346,7 @@
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-desktop@2x.jpg");
+      background-size: 490px auto;
     }
   }
 

@@ -43,19 +43,26 @@
   height: 363px;
   margin: 0 auto;
   overflow: hidden;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center bottom 3px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+    background-size: 640px auto;
+  }
 
   &::after {
     content: "";
     position: absolute;
-    top: 127px;
+    top: 137px;
     left: 129px;
     width: 55px;
     height: 53px;
-    background-image: url("../../img/map-pin.png");
+    background-image: url("../img/map-pin.png");
     background-position: 0 0;
     background-size: 62px auto;
     background-repeat: no-repeat;
-    z-index: 2;
   }
 
   iframe {
@@ -68,17 +75,18 @@
   }
 }
 
-.contacts__map-img {
-  position: absolute;
-  content: "";
-  top: -38px;
-  left: 0;
-}
+// .contacts__map-img {
+//   position: absolute;
+//   content: "";
+//   top: -38px;
+//   left: 0;
+// }
 
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
     justify-content: space-between;
     padding-bottom: 55px;
+    background-color: #f2f2f2;
   }
 
   .contacts__text {
@@ -109,11 +117,19 @@
   .contacts__map {
     width: 768px;
     height: 398px;
+    background-image: url("../../img/bg-map-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+      background-size: 1534px auto;
+    }
 
     &::after {
-      top: 90px;
-      left: 317px;
-      width: 133px;
+      top: 150px;
+      left: 323px;
+      width: 123px;
       height: 106px;
       background-size: 100%;
     }
@@ -128,9 +144,11 @@
 
   .contacts__wrapper {
     position: absolute;
-    top: 92px;
-    left: 344px;
+    top: 95px;
+    left: 110px;
     width: 570px;
+    z-index: 2;
+    background-color: #ffffff;
   }
 
   .contacts__wrapper.container {
@@ -140,8 +158,8 @@
 
   .contacts__text {
     margin-right: 80px;
-    padding-left: 75px;
-    padding-top: 38px;
+    padding-left: 76px;
+    padding-top: 36px;
   }
 
   .contacts__street {
@@ -150,18 +168,25 @@
 
   .contacts__address {
     text-align: left;
-    padding-top: 36px;
+    padding-top: 34px;
   }
 
   .contacts__map {
     width: 1440px;
-    height: 400px;
-    // outline: 2px dotted red;
+    min-height: 400px;
+    background-image: url("../../img/bg-map-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+      background-size: 2880px auto;
+    }
 
     &::after {
-      top: 91px;
-      left: 45.4%;
-      width: 133px;
+      top: 150px;
+      left: 998px;
+      width: 123px;
       height: 106px;
       background-size: 100%;
     }
