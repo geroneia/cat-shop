@@ -1,8 +1,14 @@
 {
-  "extends": "stylelint-config-htmlacademy",
-
+  "extends": [
+    "stylelint-config-htmlacademy",
+    "stylelint-config-property-sort-order-smacss"
+  ],
   "rules": {
     "declaration-no-important": true,
-    "indentation": [2, {"ignore": ["inside-parens"]}]
-  }
+    "indentation": [2, { "ignore": ["inside-parens"] }]
+  },
+  "ignoreFiles": [
+    "build/**/*",
+    "node_modules/**/*"
+  ]
 }

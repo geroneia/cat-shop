@@ -20,6 +20,7 @@
     "gulp-posthtml": "^3.0.4",
     "gulp-rename": "^1.4.0",
     "gulp-sourcemaps": "2.6.x",
+    "gulp-stylelint": "^9.0.0",
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
     "imagemin-jpegtran": "^6.0.0",
@@ -29,11 +30,13 @@
     "imagemin-webp": "^5.1.0",
     "posthtml-include": "^1.2.0",
     "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "stylelint-config-property-sort-order-smacss": "^5.0.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "stylelint:fix": "stylelint \"source/less/**/*.less\" --syntax less --fix",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp css",
     "start": "gulp start"

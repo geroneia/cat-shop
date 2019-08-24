@@ -8,6 +8,7 @@ const csso = require('gulp-csso');
 const del = require('del');
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
+const gulpStylelint = require('gulp-stylelint');
 const imagemin = require('gulp-imagemin');
 const imageminJpegtran = require('imagemin-jpegtran');
 const imageminMozjpeg = require('imagemin-mozjpeg');
@@ -61,7 +62,7 @@ gulp.task('html', () =>
 
 gulp.task('css', () =>
   gulp
-    .src(paths.CSS.src + 'style.less')
+    .src(`${paths.CSS.src}/style.less`)
     .pipe(plumber())
     .pipe(
       changed(paths.CSS.dest, {
@@ -70,11 +71,17 @@ gulp.task('css', () =>
     )
     .pipe(sourcemaps.init())
     .pipe(less())
+    .pipe(
+      gulpStylelint({
+        fix: true,
+      }),
+    )
     .pipe(postcss([autoprefixer()]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.CSS.dest))
     .pipe(browserSync.stream()),
 );
+
 
 gulp.task('cssmin', () =>
   gulp
