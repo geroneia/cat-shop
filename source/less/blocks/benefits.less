@@ -5,17 +5,17 @@
 .benefits__title {
   margin-top: 0;
   margin-bottom: 30px;
-  font-family: @font-headings;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 60px;
   color: #111111;
+  font-family: @font-headings;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
 }
 
 .benefits__list {
-  padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 0;
   list-style: none;
 }
 
@@ -23,26 +23,26 @@
   position: relative;
   margin-bottom: 26px;
   padding-left: 81px;
-  font-family: @font-general;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
   color: #444444;
+  font-family: @font-general;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
 
   &:last-child {
     margin-bottom: 46px;
   }
 
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
+    z-index: 1;
     top: -2px;
     left: 0;
     width: 60px;
     height: 60px;
     background-color: @green;
     background-repeat: no-repeat;
-    z-index: 1;
   }
 
   &:first-child::after {
@@ -73,8 +73,8 @@
 
   .benefits__list {
     display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
+    justify-content: flex-start;
     margin-left: -60px;
     counter-reset: benefits__item;
   }
@@ -89,9 +89,9 @@
     width: 324px;
     margin-bottom: 90px;
     margin-left: 60px;
+    padding-top: 155px;
     padding-right: 65px;
     padding-left: 0;
-    padding-top: 155px;
     font-size: 16px;
     line-height: 24px;
 
@@ -100,15 +100,15 @@
     }
 
     &::before {
-      counter-increment: benefits__item;
       content: counter(benefits__item) "";
       position: absolute;
-      font-family: @font-headings;
-      font-weight: 400;
-      font-size: 281px;
-      line-height: 281px;
-      color: #f2f2f2;
       z-index: -1;
+      color: #f2f2f2;
+      font-family: @font-headings;
+      font-size: 281px;
+      font-weight: 400;
+      line-height: 281px;
+      counter-increment: benefits__item;
     }
 
     &:first-child::before {
@@ -166,10 +166,10 @@
   }
 
   .benefits__item {
-    min-height: 290px;
     width: 245px;
-    margin-left: 80px;
+    min-height: 290px;
     margin-bottom: 0;
+    margin-left: 80px;
     padding-right: 0;
 
     &:last-child {

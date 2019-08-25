@@ -51,12 +51,12 @@
 
 .form__profile-option {
   display: flex;
-  justify-content: space-between;
   align-items: top;
+  justify-content: space-between;
+  width: 100%;
   margin: 0;
   margin-bottom: 14px;
   padding: 0;
-  width: 100%;
 
   &:last-child {
     margin-bottom: 23px;
@@ -81,40 +81,40 @@
 .form__program {
   padding-top: 0;
   padding-bottom: 0;
+  border: none;
+  border-bottom: 1px solid #ededed;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  border: none;
-  border-bottom: 1px solid #ededed;
 }
 
 .form__description {
   display: flex;
+  align-items: top;
   width: 320px;
+  min-width: 280px;
   margin: 0 auto;
   padding-top: 29px;
-  padding-left: 20px;
   padding-right: 0;
   padding-bottom: 34px;
-  align-items: top;
-  text-align: left;
+  padding-left: 20px;
   font-size: 24px;
   line-height: 24px;
+  text-align: left;
   text-transform: none;
-  min-width: 280px;
   // flex-wrap: nowrap;
 
 
   &::after {
     content: "";
+    display: block;
+    left: 100%;
     flex-grow: 1;
     flex-shrink: 0;
-    display: block;
-    margin-left: 22px;
-    left: 100%;
     width: 100vw;
     height: 3px;
     margin-top: 14px;
+    margin-left: 22px;
     background-color: @green;
     text-align: right;
   }
@@ -132,36 +132,36 @@
 
 .form__item {
   display: flex;
-  justify-content: flex-start;
   position: relative;
   align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .form__item-label {
-  padding-top: 13px;
   margin-right: 11px;
+  padding-top: 13px;
 }
 
 .form__owner-contacts {
   margin: 0;
   padding: 0;
+  border: none;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  border: none;
 }
 
 .form__email,
 .form__tel {
   padding-top: 12px;
-  padding-left: 15px;
-  padding-bottom: 13px;
   padding-right: 45px;
+  padding-bottom: 13px;
+  padding-left: 15px;
+  border: 1px solid #e6e6e6;
+  color: rgba(68, 68, 68, 1);
   font: inherit;
   font-size: 16px;
   line-height: 18px;
-  border: 1px solid #e6e6e6;
-  color: rgba(68, 68, 68, 1);
   text-transform: uppercase;
 
   &:hover {
@@ -196,10 +196,10 @@
     left: 248px;
     width: 17px;
     height: 13px;
-    background-image: url("../img/icon-mail.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
     background-color: transparent;
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
   }
 }
 
@@ -211,10 +211,10 @@
     left: 248px;
     width: 20px;
     height: 20px;
-    background-image: url("../img/icon-phone.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
     background-color: transparent;
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
   }
 }
 
@@ -224,32 +224,32 @@
 
 .form__description--comment {
   width: 280px;
+  margin-left: 0;
   padding-top: 28px;
   padding-bottom: 35px;
-  margin-left: 0;
 }
 
 .form__comment {
-  padding: 0;
   width: 320px;
   margin: 0 auto;
+  padding: 0;
   border: none;
 }
 
 .form__comment-text {
   width: 280px;
-  margin-left: 20px;
-  margin-right: 20px;
   min-height: 150px;
+  margin-right: 20px;
+  margin-left: 20px;
   padding-top: 13px;
-  padding-left: 15px;
   padding-right: 11px;
+  padding-left: 15px;
+  border: 1px solid #e6e6e6;
   // margin-bottom: 30px;
   font: inherit;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  border: 1px solid #e6e6e6;
 
 
   &:hover {
@@ -267,20 +267,20 @@
 }
 
 .form__extra {
-  padding-left: 0;
   padding-right: 0;
   padding-bottom: 15px;
+  padding-left: 0;
+  border: none;
   font-family: @font-headings;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  border: none;
 }
 
 .form__description--extra {
+  margin-left: 0;
   padding-top: 25px;
   padding-bottom: 8px;
-  margin-left: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -295,8 +295,8 @@
 
   .form__profile-option {
     display: flex;
-    justify-content: flex-start;
     align-items: top;
+    justify-content: flex-start;
   }
 
   .form__profile-label,
@@ -306,11 +306,11 @@
   }
 
   .form__input {
+    margin-bottom: 6px;
+    margin-left: 19px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 14px;
-    margin-left: 19px;
-    margin-bottom: 6px;
 
     // &:first-child {
     // margin-bottom: 20px;
@@ -319,9 +319,9 @@
   }
 
   .form__profile-label {
-    padding-left: 40px;
     margin-right: 0;
     padding-top: 15px;
+    padding-left: 40px;
   }
 
   // .form__name {
@@ -345,49 +345,49 @@
   .form__program {
     width: 738px;
     margin-bottom: 45px;
-    padding-left: 70px;
     padding-right: 70px;
+    padding-left: 70px;
+    border: none;
     font-size: 20px;
     line-height: 20px;
-    border: none;
   }
 
   .form__description {
     position: relative;
     min-width: 768px;
-    padding-left: 0;
-    padding-right: 0;
+    margin-right: 0;
     margin-bottom: 42px;
     margin-left: 9%;
-    margin-right: 0;
-    text-align: left;
+    padding-right: 0;
+    padding-left: 0;
     // justify-content: flex-start;
     font-size: 36px;
     line-height: 36px;
+    text-align: left;
     // min-width: 280px;
     // flex-wrap: nowrap;
 
     &::after {
+      left: 100%;
+      width: 100px;
       // content: "";
       // display: block;
       // height: 3px;
       margin-top: 22px;
+      margin-left: 40px;
       // background-color: @green;
       text-align: right;
-      margin-left: 40px;
-      left: 100%;
-      width: 100px;
     }
 
     &::before {
       content: "";
       display: block;
-      height: 3px;
-      background-color: @green;
       position: absolute;
       top: 51px;
       left: -68px;
       width: 30px;
+      height: 3px;
+      background-color: @green;
     }
   }
 
@@ -397,21 +397,21 @@
   }
 
   .form__list {
-    padding-left: 70px;
     padding-bottom: 37px;
+    padding-left: 70px;
   }
 
   .form__item-label {
-    padding-top: 16px;
     margin-right: 19px;
+    padding-top: 16px;
   }
 
   .form__email,
   .form__tel {
     padding-top: 10px;
-    padding-left: 20px;
-    padding-bottom: 10px;
     padding-right: 45px;
+    padding-bottom: 10px;
+    padding-left: 20px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -427,8 +427,8 @@
 
 
   .form__item-label--tel {
-    padding-top: 18px;
     margin-right: 10px;
+    padding-top: 18px;
   }
 
   .form__item--email {
@@ -452,19 +452,19 @@
   }
 
   .form__comment {
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
   }
 
   .form__comment-text {
     width: 631px;
     min-height: 174px;
-    margin-left: 70px;
     margin-right: 30px;
     margin-bottom: 36px;
+    margin-left: 70px;
     padding-top: 8px;
-    padding-left: 17px;
     padding-right: 17px;
+    padding-left: 17px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -481,15 +481,15 @@
   .form__wrap {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     flex-wrap: wrap;
-    margin-left: auto;
+    justify-content: flex-start;
+    width: 1440px;
     margin-right: auto;
     margin-bottom: 10px;
-    padding-left: 110px;
-    padding-right: 110px;
+    margin-left: auto;
     padding-top: 5px;
-    width: 1440px;
+    padding-right: 110px;
+    padding-left: 110px;
   }
 
   .form__profile {
@@ -500,13 +500,13 @@
   }
 
   .form__profile-list {
-    padding-right: 0;
     margin-bottom: 0;
+    padding-right: 0;
   }
 
   .form__profile-label {
-    padding-left: 0;
     margin-right: 0;
+    padding-left: 0;
   }
 
   // .form__name {
@@ -532,11 +532,11 @@
 
   .form__program {
     width: 570px;
-    margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
-    padding-left: 0;
+    margin-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
 
   .form__description {
@@ -545,9 +545,9 @@
     margin-left: 7.6%;
 
     &::before {
-      width: 70px;
-      left: -110px;
       top: 52px;
+      left: -110px;
+      width: 70px;
     }
   }
 
@@ -565,12 +565,12 @@
 
   .form__list {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-    padding-left: 110px;
+    justify-content: space-between;
+    min-width: 1220px;
     padding-right: 112px;
     padding-bottom: 20px;
-    min-width: 1220px;
+    padding-left: 110px;
   }
 
   .form__item-label {
@@ -614,8 +614,8 @@
 
   .form__comment-text {
     width: 1220px;
-    margin-left: 110px;
     margin-right: 110px;
     margin-bottom: 38px;
+    margin-left: 110px;
   }
 }

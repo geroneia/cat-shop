@@ -1,9 +1,9 @@
 .site-list {
   display: flex;
   flex-direction: column;
+  margin: 0;
   // min-height: 198px;
   padding: 0;
-  margin: 0;
   list-style: none;
 }
 
@@ -11,16 +11,16 @@
   display: block;
   padding-top: 23px;
   padding-bottom: 22px;
-  font-family: @font-headings;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
-  color: #111111;
+  border-bottom: 1px solid #e6e6e6;
   background-color: #ffffff;
+  color: #111111;
+  font-family: @font-headings;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  text-align: center;
-  border-bottom: 1px solid #e6e6e6;
 }
 
 @media (min-width: @tablet-width) {
@@ -32,11 +32,11 @@
   }
 
   .site-list__link {
+    margin-left: 33px;
+    padding-top: 42px;
+    border: none;
     font-size: 18px;
     line-height: 25px;
-    padding-top: 42px;
-    margin-left: 33px;
-    border: none;
     // в макете высота строки 24,86px
     // outline: 2px solid olive;
 
@@ -51,13 +51,13 @@
 
   .site-list__link--active {
     position: relative;
+    padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
-    padding-right: 0;
 
     &::after {
-      position: absolute;
       content: "";
+      position: absolute;
       right: 0;
       bottom: -9px;
       left: 0;
@@ -85,17 +85,17 @@
   }
 
   .site-list__link {
-    font-size: 20px;
-    line-height: 25px;
-    font-weight: 400;
-    // в макете высота строки 24,86px;
-    color: #ffffff;
-    background-color: transparent;
-    padding-top: 73px;
-    padding-bottom: 3px;
     margin-right: 32px;
     margin-left: 0;
+    padding-top: 73px;
+    padding-bottom: 3px;
     border: none;
+    background-color: transparent;
+    // в макете высота строки 24,86px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
 
 
     &:hover {

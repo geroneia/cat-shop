@@ -26,25 +26,25 @@ const svgstore = require('gulp-svgstore');
 const uglify = require('gulp-uglify');
 
 const paths = {
-  SOURCE: 'source/',
-  DEST: 'build/',
+  SOURCE: 'source',
+  DEST: 'build',
   CSS: {
-    src: 'source/less/',
-    dest: 'build/css/',
+    src: 'source/less',
+    dest: 'build/css',
   },
   JS: {
-    src: 'source/js/',
-    dest: 'build/js/',
+    src: 'source/js',
+    dest: 'build/js',
   },
   IMG: {
-    src: 'source/img/',
-    dest: 'build/img/',
+    src: 'source/img',
+    dest: 'build/img',
   },
 };
 
 gulp.task('html', () =>
   gulp
-    .src(paths.SOURCE + '*.html')
+    .src(`${paths.SOURCE}/*.html`, { since: gulp.lastRun('html') })
     .pipe(plumber())
     .pipe(
       changed(paths.DEST, {
@@ -82,10 +82,9 @@ gulp.task('css', () =>
     .pipe(browserSync.stream()),
 );
 
-
 gulp.task('cssmin', () =>
   gulp
-    .src(paths.CSS.src + 'style.less')
+    .src(`${paths.CSS.src}/style.less`)
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(less())
@@ -98,7 +97,7 @@ gulp.task('cssmin', () =>
 
 gulp.task('javascript', () =>
   gulp
-    .src([paths.JS.src + '**/*.js'])
+    .src(`${paths.JS.src}/**/*.js`, { since: gulp.lastRun('javascript') })
     .pipe(plumber())
     .pipe(
       changed(paths.JS.dest, {
@@ -116,7 +115,7 @@ gulp.task('javascript', () =>
 
 gulp.task('images', () =>
   gulp
-    .src(paths.IMG.src + '**/*.{jpg,jpeg,png,svg}')
+    .src(`${paths.IMG.src}/**/*.{jpg,jpeg,png,svg}`)
     .pipe(plumber())
     .pipe(
       changed(paths.IMG.dest, {
@@ -144,7 +143,7 @@ gulp.task('images', () =>
 
 gulp.task('webp', () =>
   gulp
-    .src(paths.IMG.src + '**/*.{png,jpg,jpeg}')
+    .src(`${paths.IMG.src}/**/*.{png,jpg,jpeg}`)
     .pipe(plumber())
     .pipe(
       changed(paths.IMG.dest, {
@@ -169,8 +168,15 @@ gulp.task('webp', () =>
 
 gulp.task('sprite', () =>
   gulp
-    .src(paths.IMG.src + 'icon-*.svg')
+    .src(`${paths.IMG.src}/icon-*.svg`)
     .pipe(plumber())
+    .pipe(
+      imagemin([
+        imageminSvgo({
+          removeViewBox: false,
+        }),
+      ]),
+    )
     .pipe(
       svgstore({
         inlineSvg: true,
@@ -186,7 +192,7 @@ gulp.task('refresh', done => {
 
 gulp.task('browserSync', () =>
   browserSync.init({
-    server: paths.DEST,
+    server: `${paths.DEST}/`,
     notify: false,
     open: true,
     cors: true,
@@ -198,7 +204,7 @@ gulp.task('clean', () => del(paths.DEST));
 
 gulp.task('copy', () =>
   gulp
-    .src([paths.SOURCE + 'fonts/**/*.{woff,woff2}', paths.SOURCE + '*.ico'], {
+    .src([`${paths.SOURCE}/fonts/**/*.{woff,woff2}`, `${paths.SOURCE}/*.ico`], {
       base: paths.SOURCE,
     })
     .pipe(plumber())
@@ -214,11 +220,11 @@ gulp.task('build', gulp.series('css', 'cssmin', 'javascript', 'images', 'webp', 
 gulp.task('clean', gulp.series('clean'));
 gulp.task('start', gulp.series('build', 'browserSync'));
 
-gulp.watch(paths.CSS.src + '**/*.less', gulp.series('css', 'cssmin'));
-gulp.watch(paths.IMG.src + '**/*.svg', gulp.series('images', 'refresh'));
-gulp.watch(paths.IMG.src + '**/*.{png,jpg,jpeg}', gulp.series('images', 'webp', 'refresh'));
-gulp.watch(paths.IMG.src + 'icon-*.svg', gulp.series('sprite', 'html', 'refresh'));
-gulp.watch(paths.JS.src + '**/*.js', gulp.series('javascript', 'refresh'));
-gulp.watch(paths.SOURCE + '*.html', gulp.series('html', 'refresh'));
-gulp.watch(paths.SOURCE + '*.ico', gulp.series('copy', 'refresh'));
-gulp.watch(paths.SOURCE + 'fonts/**/*.{woff,woff2}', gulp.series('copy', 'refresh'));
+gulp.watch(`${paths.CSS.src}/**/*.less`, gulp.series('css', 'cssmin'));
+gulp.watch(`${paths.IMG.src}/**/*.svg`, gulp.series('images', 'refresh'));
+gulp.watch(`${paths.IMG.src}/**/*.{png,jpg,jpeg}`, gulp.series('images', 'webp', 'refresh'));
+gulp.watch(`${paths.IMG.src}/icon-*.svg`, gulp.series('sprite', 'html', 'refresh'));
+gulp.watch(`${paths.JS.src}/**/*.js`, gulp.series('javascript', 'refresh'));
+gulp.watch(`${paths.SOURCE}/*.html`, gulp.series('html', 'refresh'));
+gulp.watch(`${paths.SOURCE}/*.ico`, gulp.series('copy', 'refresh'));
+gulp.watch(`${paths.SOURCE}/fonts/**/*.{woff,woff2}`, gulp.series('copy', 'refresh'));

@@ -1,29 +1,29 @@
 .extra-goods__title {
   display: flex;
-  text-align: left;
   min-width: 280px;
   margin: 0;
-  padding: 0;
   margin-left: 6%;
+  padding: 0;
+  padding-top: 28px;
   // padding-left: 100px;
   padding-bottom: 34px;
-  padding-top: 28px;
-  font-family: @font-headings;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
   color: #111111;
+  font-family: @font-headings;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
 
   &::after {
     content: "";
+    display: block;
+    left: 100%;
     flex-grow: 1;
     flex-shrink: 0;
-    display: block;
-    margin-left: 22px;
-    left: 100%;
     width: 16.5%;
     height: 3px;
     margin-top: 14px;
+    margin-left: 22px;
     background-color: @green;
     text-align: right;
   }
@@ -31,8 +31,8 @@
 
 .extra-goods__list {
   padding: 0;
-  padding-left: 20px;
   padding-right: 20px;
+  padding-left: 20px;
   list-style: none;
 }
 
@@ -45,17 +45,17 @@
 }
 
 .extra-goods__item-title {
-  margin-right: 0;
   margin-top: 13px;
-  margin-left: 2px;
+  margin-right: 0;
   margin-bottom: 14px;
+  margin-left: 2px;
   padding: 0;
+  color: #222222;
   font-family: @font-headings;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
-  color: #222222;
 }
 
 .extra-goods__description {
@@ -63,10 +63,10 @@
   justify-content: flex-start;
   margin: 0;
   margin-bottom: 14px;
+  color: #444444;
   font-family: @font-general;
   font-size: 14px;
   line-height: 14px;
-  color: #444444;
 }
 
 .extra-goods__price {
@@ -76,9 +76,9 @@
 
 .extra-goods__order {
   width: 280px;
+  margin-bottom: 17px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-bottom: 17px;
   background-color: @green;
   color: #ffffff;
 
@@ -102,8 +102,8 @@
   margin-bottom: 34px;
   background-color: @green;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
-  background-position: 0 0;
   background-repeat: no-repeat;
+  background-position: 0 0;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
@@ -122,26 +122,26 @@
 .extra-goods__gift-description {
   margin: 0;
   margin-top: 61px;
-  padding-left: 55px;
-  padding-right: 55px;
   padding-top: 0;
+  padding-right: 55px;
   padding-bottom: 42px;
+  padding-left: 55px;
+  color: #ffffff;
   font-family: @font-general;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 20px;
   text-align: center;
-  color: #ffffff;
 }
 
 @media (min-width: @tablet-width) {
   .extra-goods__title {
     position: relative;
     min-width: 708px;
-    padding: 0;
-    padding-left: 20px;
-    padding-bottom: 80px;
     margin-top: 51px;
+    padding: 0;
+    padding-bottom: 80px;
+    padding-left: 20px;
     font-size: 36px;
     line-height: 36px;
 
@@ -156,25 +156,25 @@
     }
 
     &::after {
-      margin-left: 38px;
       left: 100%;
       width: 100vw;
+      margin-left: 38px;
     }
 
     &::before {
       position: absolute;
-      margin-right: 38px;
-      left: -47px;
       top: 0;
+      left: -47px;
       width: 30px;
+      margin-right: 38px;
     }
   }
 
   .extra-goods__item {
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     border: 1px solid #cdcdcd;
     border-bottom: none;
   }
@@ -185,30 +185,30 @@
 
   .extra-goods__list {
     padding: 0;
-    padding-left: 30px;
     padding-right: 30px;
+    padding-left: 30px;
   }
 
   .extra-goods__item-title {
     min-width: 324px;
-    padding-right: 0;
-    padding-top: 26px;
-    padding-left: 37px;
-    padding-bottom: 24px;
     margin: 0;
+    padding-top: 26px;
+    padding-right: 0;
+    padding-bottom: 24px;
+    padding-left: 37px;
     font-size: 20px;
     line-height: 20px;
   }
 
   .extra-goods__description {
-    min-width: 324px;
     justify-content: flex-end;
-    margin-left: 50px;
+    min-width: 324px;
     margin-bottom: 0;
+    margin-left: 50px;
     padding-top: 30px;
-    padding-left: 0;
     padding-right: 30px;
     padding-bottom: 21px;
+    padding-left: 0;
     font-size: 16px;
     line-height: 20px;
   }
@@ -265,55 +265,55 @@
 @media (min-width: @desktop-width) {
   .extra-goods__title {
     max-width: 1300px;
+    margin-top: 53px;
     padding: 0;
     padding-bottom: 80px;
     padding-left: 29px;
-    margin-top: 53px;
 
     &::after {
       width: 100vw;
     }
 
     &::before {
-      width: 70px;
-      left: -84px;
       top: 0;
+      left: -84px;
+      width: 70px;
     }
   }
 
   .extra-goods__list {
     position: relative;
-    padding-left: 110px;
-    padding-right: 355px;
     margin-bottom: 86px;
+    padding-right: 355px;
+    padding-left: 110px;
   }
 
   .extra-goods__item {
     width: 895px;
-    border-left: none;
     border-right: none;
+    border-left: none;
   }
 
   .extra-goods__item-title {
     min-width: 285px;
-    padding-right: 0;
-    padding-top: 26px;
-    padding-left: 0;
-    padding-bottom: 24px;
     margin: 0;
+    padding-top: 26px;
+    padding-right: 0;
+    padding-bottom: 24px;
+    padding-left: 0;
     font-size: 20px;
     line-height: 20px;
   }
 
   .extra-goods__description {
-    min-width: 285px;
     justify-content: space-between;
-    margin-left: 40px;
+    min-width: 285px;
     margin-bottom: 0;
+    margin-left: 40px;
     padding-top: 30px;
-    padding-left: 0;
     padding-right: 0;
     padding-bottom: 21px;
+    padding-left: 0;
   }
 
   .extra-goods__price {
@@ -327,9 +327,9 @@
 
   .extra-goods__order {
     width: 245px;
+    margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 40px;
-    margin-top: 15px;
   }
 
   .extra-goods__gift {
@@ -352,16 +352,16 @@
 
   .extra-goods__image {
     margin-top: 65px;
-    margin-left: 96px;
     margin-bottom: 62px;
+    margin-left: 96px;
   }
 
   .extra-goods__gift-description {
     width: 205px;
     margin: 0;
     padding: 0;
-    padding-left: 40px;
     padding-bottom: 42px;
+    padding-left: 40px;
     text-align: center;
   }
 }
