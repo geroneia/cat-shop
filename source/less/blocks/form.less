@@ -37,10 +37,6 @@
 .form__profile-label {
   margin-right: 14px;
   padding-top: 14px;
-
-  // &:last-of-type {
-  //   margin-right: 12px;
-  // }
 }
 
 .form__profile-list {
@@ -62,21 +58,6 @@
     margin-bottom: 23px;
   }
 }
-
-// .form__name {
-//   width: 229px;
-//   margin-bottom: 14px;
-// }
-
-// .form__weight {
-//   width: 203px;
-//   margin-bottom: 14px;
-// }
-
-// .form__age {
-//   width: 171px;
-//   margin-bottom: 23px;
-// }
 
 .form__program {
   padding-top: 0;
@@ -102,8 +83,6 @@
   line-height: 24px;
   text-align: left;
   text-transform: none;
-  // flex-wrap: nowrap;
-
 
   &::after {
     content: "";
@@ -122,12 +101,6 @@
 
 .form__list {
   list-style: none;
-  // padding-top: 0;
-  // padding-bottom: 0;
-  // padding-left: 20px;
-  // padding-right: 20px;
-  // margin: 0 auto;
-  // width: 320px;
 }
 
 .form__item {
@@ -219,7 +192,7 @@
 }
 
 .form__item-label--tel {
-  margin-right: 5px;
+  margin-right: 9px;
 }
 
 .form__description--comment {
@@ -262,11 +235,12 @@
 
   &.error {
     border-color: #ff8282;
-    // Эта проверка же с помощью js делается?
   }
 }
 
 .form__extra {
+  margin-right: auto;
+  margin-left: auto;
   padding-right: 0;
   padding-bottom: 15px;
   padding-left: 0;
@@ -311,11 +285,6 @@
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 14px;
-
-    // &:first-child {
-    // margin-bottom: 20px;
-    // margin-left: 17px;
-    // }
   }
 
   .form__profile-label {
@@ -323,24 +292,6 @@
     padding-top: 15px;
     padding-left: 40px;
   }
-
-  // .form__name {
-  //   // width: 567px;
-  //   margin-bottom: 20px;
-  //   margin-left: 17px;
-  // }
-
-  // .form__weight {
-  //   // width: 536px;
-  //   margin-bottom: 20px;
-  //   margin-left: 21px;
-  // }
-
-  // .form__age {
-  //   // width: 497px;
-  //   margin-bottom: 72px;
-  //   margin-left: 18px;
-  // }
 
   .form__program {
     width: 738px;
@@ -360,22 +311,15 @@
     margin-left: 9%;
     padding-right: 0;
     padding-left: 0;
-    // justify-content: flex-start;
     font-size: 36px;
     line-height: 36px;
     text-align: left;
-    // min-width: 280px;
-    // flex-wrap: nowrap;
 
     &::after {
       left: 100%;
       width: 100px;
-      // content: "";
-      // display: block;
-      // height: 3px;
       margin-top: 22px;
       margin-left: 40px;
-      // background-color: @green;
       text-align: right;
     }
 
@@ -470,6 +414,7 @@
   }
 
   .form__extra {
+    position: relative;
     display: inline-block;
     padding-bottom: 13px;
     font-size: 20px;
@@ -509,27 +454,6 @@
     padding-left: 0;
   }
 
-  // .form__name {
-  //   width: 506px;
-  //   margin-bottom: 20px;
-  //   padding-left: 19px;
-  //   padding-top: 9px;
-  //   margin-left: 16px;
-  // }
-
-  // .form__weight {
-  //   width: 475px;
-  //   margin-bottom: 20px;
-  //   margin-left: 20px;
-  //   padding-left: 19px;
-  // }
-
-  // .form__age {
-  //   width: 432px;
-  //   margin-bottom: 0;
-  //   padding-left: 16px;
-  // }
-
   .form__program {
     width: 570px;
     margin-right: 0;
@@ -537,6 +461,13 @@
     margin-left: 0;
     padding-right: 0;
     padding-left: 0;
+  }
+
+  .form__owner-contacts,
+  .form__comment,
+  .form__extra {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .form__description {
@@ -608,14 +539,12 @@
     }
   }
 
-  .form__comment {
-    // padding-left: 220px;
-  }
-
   .form__comment-text {
     width: 1220px;
     margin-right: 110px;
     margin-bottom: 38px;
     margin-left: 110px;
   }
+
+
 }
