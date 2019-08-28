@@ -82,6 +82,8 @@
     border: 1px solid #cdcdcd;
     border-radius: 50%;
     background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    outline: none;
 
     &::after {
       content: "";
@@ -93,14 +95,31 @@
       border-radius: 50%;
       background-color: @green;
     }
+
+    &:hover {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+      border-color: @green;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    }
   }
 
   .range-slider__start,
   .range-slider__finish {
     padding-bottom: 5px;
-    border-bottom: 1px solid #bebebe;
+    border-bottom: 1px dotted #bebebe;
     font-size: 20px;
     line-height: 20px;
+
+    &:hover {
+      border-bottom: 1px solid #989898;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 }
 
