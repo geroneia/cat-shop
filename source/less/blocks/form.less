@@ -143,10 +143,20 @@
 
   &:active {
     border-color: #444444;
+
+    + .form__email-icon,
+    + .form__tel-icon {
+      fill: @green;
+    }
   }
 
   &:invalid {
     border-color: #ff8282;
+
+    + .form__email-icon,
+    + .form__tel-icon {
+      fill: #ff8282;
+    }
   }
 }
 
@@ -161,33 +171,39 @@
 
 .form__item--email {
   padding-bottom: 14px;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 16px;
-    left: 248px;
-    width: 17px;
-    height: 13px;
-    background-color: transparent;
-    background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+.form__email-icon {
+  position: absolute;
+  top: 16px;
+  left: 248px;
+  width: 17px;
+  height: 13px;
+  fill: #222222;
+
+  &:hover {
+    fill: #222222;
+  }
+
+  &:active {
+    fill: @green;
   }
 }
 
-.form__item--tel {
-  &::after {
-    content: "";
-    position: absolute;
-    top: 13px;
-    left: 248px;
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+.form__tel-icon {
+  position: absolute;
+  top: 13px;
+  left: 248px;
+  width: 20px;
+  height: 20px;
+  fill: #222222;
+
+  &:hover {
+    fill: #222222;
+  }
+
+  &:active {
+    fill: @green;
   }
 }
 
@@ -218,7 +234,6 @@
   padding-right: 11px;
   padding-left: 15px;
   border: 1px solid #e6e6e6;
-  // margin-bottom: 30px;
   font: inherit;
   font-size: 16px;
   line-height: 18px;
@@ -377,22 +392,16 @@
 
   .form__item--email {
     padding-bottom: 20px;
-
-    &::after {
-      top: 20px;
-      left: 594px;
-      width: 17px;
-      height: 13px;
-    }
   }
 
-  .form__item--tel {
-    &::after {
-      top: 17px;
-      left: 594px;
-      width: 20px;
-      height: 20px;
-    }
+  .form__email-icon {
+    top: 20px;
+    left: 594px;
+  }
+
+  .form__tel-icon {
+    top: 17px;
+    left: 594px;
   }
 
   .form__comment {
@@ -523,20 +532,20 @@
 
   .form__item--email {
     min-width: 570px;
+  }
 
-    &::after {
-      top: 20px;
-      left: 533px;
-    }
+  .form__email-icon {
+    top: 20px;
+    left: 533px;
   }
 
   .form__item--tel {
     min-width: 570px;
+  }
 
-    &::after {
-      top: 17px;
-      left: 534px;
-    }
+  .form__tel-icon {
+    top: 17px;
+    left: 534px;
   }
 
   .form__comment-text {
