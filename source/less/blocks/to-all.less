@@ -1,3 +1,18 @@
+.to-all {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 145px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
 
 .to-all__show {
   margin-top: 80px;
@@ -47,7 +62,14 @@
     height: 433px;
     margin-top: 115px;
     border: 1px solid #e6e6e6;
-    // Здесь тоже непонятно с высотой - под кнопкой слишком много места, хотя отступов там нет
+
+    &::after {
+      top: 55px;
+      left: 133px;
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/icon-plus.svg");
+    }
   }
 
   .to-all__show {
@@ -81,6 +103,10 @@
 @media (min-width: @desktop-width) {
   .to-all {
     margin-top: 120px;
+
+    &::after {
+      left: 93px;
+    }
   }
 
   .to-all__show {
