@@ -1,12 +1,11 @@
 
 .main-heading {
-  // min-height: 476px;
   padding-top: 27px;
-  color: #ffffff;
   background-image: url("../img/index-background-mobile@1x.jpg"),
     linear-gradient(to bottom, #63a73a 305px, #ffffff 305px);
   background-repeat: no-repeat;
   background-position: 0 0;
+  color: #ffffff;
   text-align: center;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -21,8 +20,8 @@
   margin-top: 0;
   margin-bottom: 26px;
   font-family: @font-headings;
-  font-weight: 400;
   font-size: 36px;
+  font-weight: 400;
   line-height: 36px;
 }
 
@@ -30,20 +29,20 @@
   display: block;
   margin-bottom: 27px;
   font-family: @font-headings;
-  font-weight: 400;
   font-size: 14px;
+  font-weight: 400;
   line-height: 14px;
   text-transform: uppercase;
 }
 
 .main-heading__button {
   margin-bottom: 22px;
-  padding-left: 73px;
   padding-right: 73px;
+  padding-left: 73px;
+  background-color: @green;
+  color: #ffffff;
   font-size: 14px;
   line-height: 18px;
-  color: #ffffff;
-  background-color: @green;
 }
 
 @media (min-width: @tablet-width) {
@@ -52,47 +51,47 @@
     flex-direction: column;
     align-items: flex-start;
     padding-top: 0;
+    background: none;
     color: #111111;
     text-align: left;
-    background: none;
   }
 
   .main-heading__title {
-    margin-left: 87px;
     margin-right: 200px;
     margin-bottom: 40px;
+    margin-left: 87px;
     font-size: 60px;
     line-height: 60px;
   }
 
   .main-heading__slogan {
-    margin-left: 88px;
     margin-bottom: 20px;
+    margin-left: 88px;
     font-size: 20px;
     line-height: 20px;
   }
 
   .main-heading__button {
     position: absolute;
-    left: 29px;
     top: 369px;
+    left: 29px;
     margin-left: 89px;
     padding-top: 15px;
+    padding-right: 28px;
     padding-bottom: 16px;
     padding-left: 26px;
-    padding-right: 28px;
+    background-color: @green;
+    color: #ffffff;
     font-size: 20px;
     line-height: 20px;
-    color: #ffffff;
-    background-color: @green;
 
     &:hover {
       background-color: #5eaa2f;
     }
 
     &:active {
-      color: rgba(255, 255, 255, 0.3);
       background-color: #5eaa2f;
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 
@@ -110,9 +109,9 @@
   .main-heading {
     position: relative;
     min-height: 566px;
+    margin-bottom: 17px;
     padding-top: 105px;
     padding-left: 108px;
-    margin-bottom: 17px;
 
     &::after {
       content: "";
@@ -130,20 +129,20 @@
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/index-background-desktop@2x.jpg"),
           linear-gradient(to bottom, #64a93c 696px, #ffffff 696px);
-        background-size: 1440px auto;
+        background-size: 640px auto;
       }
     }
   }
 
   .main-heading__title {
-    margin-left: 84px;
     margin-right: 720px;
     margin-bottom: 42px;
+    margin-left: 84px;
   }
 
   .main-heading__slogan {
-    margin-left: 84px;
     margin-bottom: 50px;
+    margin-left: 84px;
   }
 
   .main-heading__img {
@@ -155,8 +154,8 @@
   }
 
   .main-heading__button {
-    left: 102px;
     top: 339px;
+    left: 102px;
     padding-bottom: 17px;
   }
 }

@@ -1,8 +1,8 @@
 .product {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   flex-wrap: wrap;
+  align-items: flex-start;
   padding-left: 20px;
   border-bottom: 1px solid #ededed;
 }
@@ -10,48 +10,44 @@
 .product__description {
   display: flex;
   flex-wrap: wrap;
-  width: 280px;
   align-items: flex-start;
-  // height: 144px;
+  width: 280px;
 }
 
 .product__image-wrap {
   display: flex;
-  // width: 140px;
-  // height: 144px;
-  // У тега picture высота оказывается больше картинки внутри тега img, из-за этого кнопка заказа оказывается ниже, чем нужно.
 }
 
 .product__title {
   width: 140px;
-  padding-right: 68px;
   margin-top: 22px;
   margin-bottom: 12px;
-  font-family: @font-headings;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  padding-right: 68px;
   color: #111111;
+  font-family: @font-headings;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
   text-transform: uppercase;
 }
 
 .product__options {
   width: 140px;
   font-family: @font-general;
-  font-weight: 400;
   font-size: 12px;
+  font-weight: 400;
   line-height: 16px;
 }
 
 .product__order {
   width: 280px;
   margin-bottom: 24px;
-  padding-left: 110px;
-  padding-right: 108px;
   padding-top: 10px;
+  padding-right: 108px;
   padding-bottom: 10px;
-  color: #ffffff;
+  padding-left: 110px;
   background-color: @green;
+  color: #ffffff;
 
   &:hover {
     background-color: #5eaa2f;
@@ -65,10 +61,10 @@
 
 @media (min-width: @tablet-width) {
   .product {
-    margin-bottom: 23px;
-    background-image: linear-gradient(to bottom, #ffffff 114px, #f2f2f2 114px);
-    border-bottom: none;
+    margin-bottom: 25px;
     padding-left: 0;
+    border-bottom: none;
+    background-image: linear-gradient(to bottom, #ffffff 114px, #f2f2f2 114px);
   }
 
   .product__description {
@@ -77,38 +73,38 @@
   }
 
   .product__image {
-    margin: 0;
-    margin-bottom: 33px;
     width: 324px;
     height: auto;
+    margin: 0;
+    margin-bottom: 33px;
   }
 
   .product__image--big-can {
-    padding-top: 32px;
     margin-bottom: 37px;
+    padding-top: 32px;
   }
 
   .product__image--small-can {
-    padding-top: 68px;
     margin-bottom: 37px;
+    padding-top: 68px;
   }
 
   .product__wrapper {
-    padding-left: 38px;
     padding-right: 39px;
+    padding-left: 38px;
   }
 
   .product__title {
     display: inline-block;
     width: 130px;
     margin-top: 0;
+    margin-right: 60px;
     margin-bottom: 18px;
     margin-left: 59px;
-    margin-right: 60px;
-    text-align: center;
     padding-right: 0;
     font-size: 20px;
     line-height: 20px;
+    text-align: center;
 
     &:last-of-type br {
       display: none;
@@ -117,11 +113,11 @@
 
   .product__order {
     width: 249px;
-    margin-left: 37px;
     margin-right: 37px;
-    padding-left: 95px;
-    padding-right: 93px;
     margin-bottom: 40px;
+    margin-left: 37px;
+    padding-right: 93px;
+    padding-left: 95px;
   }
 
   .product__options {
@@ -134,16 +130,16 @@
 
 @media (min-width: @desktop-width) {
   .product {
-    // outline: 2px solid lawngreen;
-    background-image: linear-gradient(to bottom, #ffffff 120px, #f2f2f2 120px);
+    min-height: 554px;
     margin-bottom: 20px;
+    background-image: linear-gradient(to bottom, #ffffff 120px, #f2f2f2 120px);
   }
 
   .product__image {
-    margin: 0;
-    margin-bottom: 37px;
     width: 245px;
     height: auto;
+    margin: 0;
+    margin-bottom: 37px;
   }
 
   .product__image--big-can {
@@ -155,17 +151,17 @@
   }
 
   .product__title {
-    margin-left: 21px;
-    margin-right: 22px;
     margin-top: 0;
+    margin-right: 22px;
     margin-bottom: 14px;
+    margin-left: 21px;
   }
 
   .product__order {
     width: 169px;
-    padding-left: 52px;
-    padding-right: 52px;
     margin-bottom: 40px;
+    padding-right: 52px;
+    padding-left: 52px;
   }
 
   .product__options {

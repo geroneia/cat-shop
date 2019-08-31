@@ -1,17 +1,16 @@
 
 .page-header {
   display: flex;
-  flex-direction: column;
   position: relative;
-  // min-height: 264px;
-  font-family: @font-headings;
-  padding-left: 0;
+  flex-direction: column;
   padding-right: 0;
+  padding-left: 0;
+  font-family: @font-headings;
 }
 
 .page-header__logo {
-  border-bottom: 1px solid #e6e6e6;
   padding-bottom: 2px;
+  border-bottom: 1px solid #e6e6e6;
 
   &:hover {
     opacity: 0.8;
@@ -23,11 +22,11 @@
 }
 
 .page-header__logo-image {
+  width: 191px;
+  height: 38px;
   margin-top: 12px;
   margin-bottom: 10px;
   margin-left: 20px;
-  width: 191px;
-  height: 38px;
 }
 
 .page-header__wrapper {
@@ -36,11 +35,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-header {
-    // min-height: 100px;
-    // flex-direction: row;
-  }
-
   .page-header__wrapper {
     flex-direction: row;
     justify-content: space-between;

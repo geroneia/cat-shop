@@ -1,8 +1,8 @@
 .program-selection {
+  background-color: #ffffff;
+  color: #111111;
   font-family: @font-headings;
   font-weight: 400;
-  color: #111111;
-  background-color: #ffffff;
 }
 
 .program-selection__title {
@@ -10,8 +10,8 @@
   padding-bottom: 25px;
   padding-left: 20px;
   font-size: 36px;
-  line-height: 60px;
   font-weight: 400;
+  line-height: 60px;
 }
 
 .program-selection__text {
@@ -31,31 +31,33 @@
 
 .program-selection__button {
   width: 280px;
+  margin-top: 15px;
   margin-bottom: 21px;
   margin-left: 20px;
   padding-top: 11px;
   padding-bottom: 9px;
-  color: #ffffff;
   background-color: @green;
+  color: #ffffff;
 
   &:hover {
     background-color: #5eaa2f;
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
     background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
 .program-selection__note {
-  padding: 0;
   margin: 0;
-  margin-bottom: 30px;
-  text-align: center;
+  margin-bottom: 16px;
+  padding: 0;
   font-family: @font-general;
   font-size: 14px;
   line-height: 16px;
+  text-align: center;
+  text-transform: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -64,36 +66,38 @@
   }
 
   .program-selection__title {
+    padding-top: 0;
     padding-bottom: 56px;
     padding-left: 28px;
-    padding-top: 0;
     font-size: 60px;
     line-height: 60px;
   }
 
   .program-selection__text {
-    padding-left: 69px;
     padding-right: 370px;
     padding-bottom: 61px;
+    padding-left: 69px;
     font-size: 20px;
     line-height: 30px;
   }
 
   .program-selection__button {
     width: 283px;
+    margin-top: 13px;
+    margin-bottom: 60px;
     margin-left: 70px;
-    margin-bottom: 74px;
-    font-size: 20px;
-    line-height: 20px;
-    padding-left: 1px;
     padding-top: 15px;
     padding-bottom: 16px;
+    padding-left: 1px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .program-selection__note {
     position: absolute;
-    right: 173px;
-    bottom: 63px;
+    bottom: 76px;
+    left: 415px;
+    width: 180px;
     font-size: 16px;
     line-height: 16px;
   }
@@ -101,24 +105,24 @@
 
 @media (min-width: @desktop-width) {
   .program-selection__title {
-    padding-left: 110px;
     padding-top: 60px;
+    padding-left: 110px;
   }
 
   .program-selection__text {
-    padding-left: 110px;
     padding-right: 970px;
+    padding-left: 110px;
   }
 
   .program-selection__button {
     width: 568px;
+    margin-bottom: 68px;
     margin-left: 111px;
-    margin-bottom: 83px;
     padding-left: 10px;
   }
 
   .program-selection__note {
-    right: 360px;
-    bottom: 72px;
+    bottom: 85px;
+    left: 760px;
   }
 }

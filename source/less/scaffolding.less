@@ -13,11 +13,11 @@ body {
   min-width: 320px;
   margin: 0;
   padding: 0;
-  font-size: 14px;
-  line-height: 18px;
-  font-family: @font-general;
   color: #444444;
+  font-family: @font-general;
+  font-size: 14px;
   font-style: normal;
+  line-height: 18px;
   // background-image:
   //   url("../img/index-can-mobile@1x.png"),
   //   url("../img/index-background-mobile@1x.jpg");
@@ -33,47 +33,47 @@ img {
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
 
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
 
-  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 
   border: 0;
+
+  white-space: nowrap;
 
   clip-path: inset(100%);
 }
 
 .container {
   width: 320px;
-  padding-left: 20px;
-  padding-right: 20px;
   margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .button {
   display: inline-block;
-  vertical-align: center;
   padding-top: 11px;
   padding-bottom: 11px;
+  border: none;
   font-family: @font-headings;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
-  border: none;
+  vertical-align: center;
 }
 
 @media (min-width: @tablet-width) {
   .container {
     width: 768px;
-    padding-left: 30px;
     padding-right: 30px;
+    padding-left: 30px;
     // outline: 2px solid rebeccapurple;
   }
 }
@@ -81,8 +81,8 @@ img {
 @media (min-width: @desktop-width) {
   .container {
     width: 1440px;
-    padding-left: 110px;
     padding-right: 110px;
+    padding-left: 110px;
     // outline: 2px solid rgb(29, 175, 78);
   }
 }

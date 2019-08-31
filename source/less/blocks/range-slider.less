@@ -1,22 +1,22 @@
 .range-slider {
   display: flex;
+  position: relative;
   flex-direction: row;
   justify-content: space-between;
-  position: relative;
   margin-bottom: 0;
 }
 
 .range-slider__scale {
   position: relative;
+  flex-shrink: 0;
   align-self: center;
   width: 82px;
   height: 14px;
-  margin-left: 19px;
   margin-right: 19px;
-  background-color: #ffffff;
+  margin-left: 19px;
   border: 1px solid #cdcdcd;
   border-radius: 7px;
-  flex-shrink: 0;
+  background-color: #ffffff;
   cursor: pointer;
   // outline: 2px solid lightcoral;
 }
@@ -45,75 +45,99 @@
 .range-slider__start,
 .range-slider__finish {
   padding: 0;
-  cursor: pointer;
-  color: #111111;
+  border: none;
   background-color: transparent;
+  color: #111111;
   font-family: @font-headings;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  border: none;
+  cursor: pointer;
 }
 
 @media (min-width: @tablet-width) {
   .range-slider {
-    background-color: transparent;
     width: 708px;
-    padding-left: 99px;
     padding-right: 40px;
+    padding-left: 99px;
+    background-color: transparent;
   }
 
   .range-slider__scale {
     width: 428px;
     height: 6px;
-    padding: 0;
-    margin-left: 23px;
     margin-right: 23px;
-    background-color: #dcdcdc;
+    margin-left: 23px;
+    padding: 0;
     border: none;
     border-radius: 2px;
+    background-color: #dcdcdc;
   }
 
   .range-slider__pin {
-    width: 34px;
-    height: 34px;
     top: -13px;
     left: 200px;
-    border-radius: 50%;
-    background-color: #ffffff;
+    width: 34px;
+    height: 34px;
     border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 
     &::after {
-      position: absolute;
       content: "";
-      width: 8px;
-      height: 8px;
+      position: absolute;
       top: 12px;
       left: 12px;
-      background-color: @green;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
+      background-color: @green;
+    }
+
+    &:hover {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+      border-color: @green;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
     }
   }
 
   .range-slider__start,
   .range-slider__finish {
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #bebebe;
     font-size: 20px;
     line-height: 20px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #bebebe;
+
+    &:hover {
+      border-bottom: 1px solid #989898;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .range-slider {
     width: 690px;
-    padding-left: 80px;
-    padding-right: 45px;
     padding-top: 0;
+    padding-right: 40px;
+    padding-left: 80px;
   }
 
   .range-slider__start,
   .range-slider__finish {
-    margin-top: 2px;
+    margin-top: 4px;
+  }
+
+  .range-slider__pin {
+    top: -14px;
+    left: 196px;
   }
 }
