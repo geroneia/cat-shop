@@ -72,6 +72,7 @@
 .form__description {
   display: flex;
   align-items: top;
+  flex-wrap: nowrap;
   width: 320px;
   min-width: 280px;
   margin: 0 auto;
@@ -86,7 +87,6 @@
 
   &::after {
     content: "";
-    display: block;
     left: 100%;
     flex-grow: 1;
     flex-shrink: 0;
@@ -405,6 +405,7 @@
   }
 
   .form__comment {
+    width: 768px;
     margin-right: 0;
     margin-left: 0;
   }
@@ -475,6 +476,7 @@
   .form__owner-contacts,
   .form__comment,
   .form__extra {
+    width: 1440px;
     margin-right: auto;
     margin-left: auto;
   }
