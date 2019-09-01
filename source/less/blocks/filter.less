@@ -110,6 +110,10 @@
   border-left: 3px solid @green;
 }
 
+.filter__input:focus + label::before {
+  box-shadow: 0 0 4px 2px #4d90fe;
+}
+
 @media (min-width: @tablet-width) {
   .filter__list {
     width: 630px;
