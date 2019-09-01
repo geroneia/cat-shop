@@ -26,11 +26,11 @@
     border: 1px solid #cdcdcd;
   }
 
-  &:active {
+  &:focus {
     border-color: #444444;
   }
 
-  &:invalid {
+  &:invalid:not(:focus):not(:placeholder-shown) {
     border-color: #ff8282;
   }
 }
@@ -143,7 +143,7 @@
     border: 1px solid #cdcdcd;
   }
 
-  &:active {
+  &:focus {
     border-color: #444444;
 
     + .form__email-icon,
@@ -152,7 +152,7 @@
     }
   }
 
-  &:invalid {
+  &:invalid:not(:focus):not(:placeholder-shown) {
     border-color: #ff8282;
 
     + .form__email-icon,
