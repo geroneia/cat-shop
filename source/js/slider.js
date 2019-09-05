@@ -10,10 +10,10 @@ var beforeImg = instanceWrapperTab.querySelector('.instance__photo-wrapper--fat-
 var pin = instanceWrapperTab.querySelector('.range-slider__pin');
 var line = instanceWrapperTab.querySelector('.range-slider__scale');
 var setBackground = function () {
-  if (window.innerWidth>=TABLET_WIDTH && window.innerWidth<DESKTOP_WIDTH) {
+  if (window.innerWidth>=TABLET_WIDTH && window.innerWidth<DESKTOP_WIDTH && instanceWrapperTab) {
     instanceWrapperTab.style.backgroundImage = "linear-gradient(to left, #eaeaea " + (pin.getBoundingClientRect().left + PIN_WIDTH/2) + "px, #f2f2f2 " + (pin.getBoundingClientRect().left + PIN_WIDTH/2) + "px)";
   }
-  if (window.innerWidth>=DESKTOP_WIDTH) {
+  if (window.innerWidth>=DESKTOP_WIDTH && instanceWrapperTab) {
     instanceWrapperTab.style.backgroundImage = "linear-gradient(to left, #eaeaea " + (pin.getBoundingClientRect().left + PIN_WIDTH/2) + "px, #f2f2f2 " + (pin.getBoundingClientRect().left + PIN_WIDTH/2) + "px)";
   }
 };
@@ -24,6 +24,7 @@ startBtn.addEventListener('click', function () {
   pin.classList.remove('range-slider__pin--after');
   pin.classList.add('range-slider__pin--before');
   beforeImg.style.width = '100%';
+  setBackground();
 });
 finishBtn.addEventListener('click', function () {
   beforeImg.classList.remove('instance__photo-wrapper--appearance');
@@ -31,4 +32,7 @@ finishBtn.addEventListener('click', function () {
   pin.classList.remove('.range-slider__pin--before');
   pin.classList.add('range-slider__pin--after');
   beforeImg.style.width = '0';
+  setBackground();
 });
+
+
