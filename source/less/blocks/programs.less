@@ -1,4 +1,5 @@
 .programs {
+  .container ();
   background-color: #ffffff;
 }
 
@@ -129,6 +130,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .programs {
+    .container (768px, 30px);
+  }
+
   .programs__item {
     padding-top: 74px;
   }
@@ -197,6 +202,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .programs {
+    .container (1440px, 110px);
+  }
+
   .programs__list {
     display: flex;
     flex-wrap: wrap;

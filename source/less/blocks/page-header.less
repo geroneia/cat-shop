@@ -3,6 +3,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  .container ();
   padding-right: 0;
   padding-left: 0;
   font-family: @font-headings;
@@ -35,6 +36,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-header {
+    .container (768px, 30px);
+  }
+
   .page-header__wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -50,13 +55,14 @@
     height: 58px;
     margin-top: 24px;
     margin-bottom: 0;
-    margin-left: 30px;
+    margin-left: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
     min-height: 128px;
+    .container (1440px, 110px);
   }
 
   .page-header__wrapper {
@@ -72,6 +78,5 @@
     height: 59px;
     margin-top: 53px;
     margin-bottom: 0;
-    margin-left: 111px;
   }
 }
